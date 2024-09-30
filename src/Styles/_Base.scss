@@ -3,6 +3,7 @@ body {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: white;
 }
 
 * {
@@ -11,7 +12,7 @@ body {
     box-sizing: border-box;
 }
 
-ol, ul {
+ol, ul, li {
     list-style: none;
 }
 

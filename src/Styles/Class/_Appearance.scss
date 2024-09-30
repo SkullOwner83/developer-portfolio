@@ -1,0 +1,38 @@
+//Styles for convencional buttons
+@mixin Convencional-Button($Color: rgb(255, 0, 204)) {
+    font-size: 18px;
+    color: white;
+    background-color: $Color;
+    
+    padding: 8px;
+    border-radius: 8px;
+    border-style: none;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.Convencional-Button {
+    @include Convencional-Button();
+}
+
+//Styles for outlined buttons
+@mixin Outlined-Button($Color: white) {
+    @include Convencional-Button();
+    background-color: transparent;
+    border: 2px solid $Color;
+}
+
+.Outlined-Button {
+    @include Outlined-Button();
+}
+
+//Show the content borders on debug mode
+@mixin DebugBorders($Color: red) {
+    @if $DebugMode {
+      border: 1px solid $Color;
+    } 
+    @else {
+      border: none;
+    }
+  };

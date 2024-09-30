@@ -1,0 +1,73 @@
+body {
+    background-color: #262626;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    .Left-Container {
+        grid-column: 1 / span 2;
+        display: flex;
+        flex-direction: column;
+        padding: 15%;;
+        gap: 64px;
+
+        .Info-Container {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;            
+            height: 150px;
+
+            .Photo-Container {
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;                
+                border: 3px solid white;
+
+                background-image: url("../../../src/Assets/Profile\ Photo.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+
+            .Biografy-Container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-size: 32px;
+                    
+                .Biografy-Name { font-weight: bold; }
+                .Biografy-Description { color: #009afb; }                
+            }
+        
+            .Buttons-Container {
+                display: flex;
+                gap: 16px;                        
+                
+                button { min-width: 150px; }
+            }
+        }
+    
+        li {
+            color: rgb(181, 181, 181);
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    .Right-Container {
+        grid-column: 3;    
+        width: 100%;
+        height: 100%;
+
+        background-image: url("../../../src/Assets/Background Image.jpg");        
+        background-size: cover;
+        background-position: center;
+    }
+}
