@@ -1,4 +1,6 @@
-import {Header} from "./Components/Header.jsx";
+import { Footer } from "./Components/Footer.jsx";
+import { Header } from "./Components/Header.jsx";
+import { Home } from "./Pages/Home.jsx";
 import './Styles/Styles.scss';
 
 function App() {
@@ -6,7 +8,9 @@ function App() {
   return (
     <div>
       <Header/>
-   </div>
+      <Home/>
+      <Footer/>
+    </div>
   )
 }
 

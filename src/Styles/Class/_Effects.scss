@@ -1,0 +1,13 @@
+//Effect to turn on the color on hover and fade when not
+@mixin Fx-TurnOn-Light($Color: white, $Time: 1s) {
+    transition: $Time;
+
+    &:hover {
+        color: $Color;
+        transition: 0s;
+    }
+}
+
+.Fx-TurnOn-Light {
+    @include Fx-TurnOn-Light();
+}
