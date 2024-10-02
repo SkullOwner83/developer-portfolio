@@ -11,3 +11,27 @@
 .Fx-TurnOn-Light {
     @include Fx-TurnOn-Light();
 }
+
+//Effect to expand the element scale
+@mixin Fx-Expand($Scale: 1.2, $Time: 0.2s) {
+    transition: $Time;
+
+    &:hover {
+        transform: scale($Scale);
+    }
+}
+
+.Fx-Compact {
+    @include Fx-Expand();
+}
+
+//Effect to float a element like a dropped item
+@mixin Fx-Floating($Heigh: 10px, $Time: 2s) {
+    animation: Icon-Floating $Time ease-in-out infinite;
+
+    @keyframes Icon-Floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-$Heigh); }
+        100% { transform: translateY(0px); }
+    }
+}

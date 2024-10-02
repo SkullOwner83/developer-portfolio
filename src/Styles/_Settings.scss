@@ -1,0 +1,34 @@
+//Colors variables
+$primaryColor: rgb(215, 55, 194);
+$secondaryColor: rgb(56, 158, 236);
+$shadow: rgba(0, 0, 0, 0.3);
+$backgroundGradient: linear-gradient(45deg, #131014, #302542);
+
+//Size variables
+$FontSize: 1.3rem;
+$SmallFontSize: 1rem;
+$BigFontSize: 2rem;
+$HeaderSize: 50px;
+$ScreenMinWidth: 780px;
+$MinRadius: 8px;
+$MaxRadius: 24px;
+$SectionSeparation: 64px;
+
+$FontFamily: Arial, Helvetica, sans-serif;
+
+//Debug mode to show the container borders
+$DebugMode: false;
+
+//Function to change the content styles when the screen width is very small
+@mixin ScreenMinWidth($MinWidth: $ScreenMinWidth) {
+  @media screen and (max-width: $MinWidth) {
+      @content
+  }
+};
+
+//Function to change the content styles when the screen height is very small
+@mixin ScreenMinHeight($MinHeight) {
+  @media screen and (max-height: $MinHeight) {
+      @content
+  }
+};

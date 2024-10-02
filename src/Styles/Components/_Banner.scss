@@ -1,7 +1,10 @@
-header {
+.Banner {
     display: grid;
     grid-template-columns: 30% 30% 40%;
+    background-image: $backgroundGradient;
     align-items: center;
+    position: relative;
+    height: 100vh;
 
     .Left-Container {
         grid-column: 1 / span 2;
@@ -18,7 +21,7 @@ header {
             flex-direction: row;
             justify-content: center;
             height: 150px;
-            gap: 32px;            
+            gap: 32px;
 
             .Photo-Container {
                 width: 150px;
@@ -48,39 +51,47 @@ header {
                 button { min-width: 150px; }
             }
         }
-    
-        li {
-            color: rgb(180, 180, 180);
-            font-size: 24px;
-            text-align: center;
-            cursor: pointer;
 
-            &.Selected {
-                color: white;
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;            
 
-                &::before { 
-                    font-family: 'Courier New', Courier, monospace;
-                    display: inline-block;
-                    content: "►";
-                    animation: LeftMove 1s linear infinite;
-                    
-                    @keyframes LeftMove {
-                        0% { transform: translateX(-10px); }
-                        50% { transform: translateX(-15px); }
-                        100% { transform: translate(-10px); }
+            li {
+                color: rgb(180, 180, 180);
+                font-size: 24px;
+                text-align: center;
+                user-select: none;
+                cursor: pointer;
+                min-width: 200px;
+
+                &.Selected {
+                    color: white;
+
+                    &::before { 
+                        font-family: 'Courier New', Courier, monospace;
+                        display: inline-block;
+                        content: "►";
+                        animation: LeftMove 1s linear infinite;
+                        
+                        @keyframes LeftMove {
+                            0% { transform: translateX(-10px); }
+                            50% { transform: translateX(-15px); }
+                            100% { transform: translate(-10px); }
+                        }
                     }
-                }
 
-                &::after { 
-                    font-family: 'Courier New', Courier, monospace;
-                    display: inline-block;
-                    content: "◄"; 
-                    animation: RightMove 1s linear infinite;
+                    &::after { 
+                        font-family: 'Courier New', Courier, monospace;
+                        display: inline-block;
+                        content: "◄"; 
+                        animation: RightMove 1s linear infinite;
 
-                    @keyframes RightMove {
-                        0% { transform: translateX(10px); }
-                        50% { transform: translateX(15px); }
-                        100% { transform: translate(10px); }
+                        @keyframes RightMove {
+                            0% { transform: translateX(10px); }
+                            50% { transform: translateX(15px); }
+                            100% { transform: translate(10px); }
+                        }
                     }
                 }
             }

@@ -1,8 +1,10 @@
  @import "./Base";
+ @import "./_Settings";
  @import "./Class/Appearance";
  @import "./Class/Effects";
+ @import "./Class/Behaviors";
 
- @import "./Components/Header";
+ @import "./Components/Banner";
  @import "./Components/Footer";
  @import "./Components/_Carousel";
  

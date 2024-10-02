@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-export const Header = () => {
+export const Banner = () => {
     //window.open('https://drive.usercontent.google.com/download?id=1lI-V3yQ1eC7SwhAQYlkElD_ltRUovpBM&export=download&authuser=0&confirm=t&uuid=3102a3e6-0a35-432b-9cdb-faf0aa7574cc&at=AN_67v3yWwnkqIILGvsauQuLCREs:1727677563401" target="blank', '_blank')
 
     const menuOptions = ['Iniciar juego', 'Tecnologías', 'Experiencia', 'Proyectos'];
     const [activeOption, setActiveIndex] = useState(0);
 
     return (
-        <header>
+        <div className="Banner">
             <div className="Left-Container">
                 <div className="Info-Container">
                     <div className="Photo-Container"/>
@@ -27,8 +27,7 @@ export const Header = () => {
 
                 <ul>
                     {menuOptions.map((item, index) => (
-                        <li
-                            key={index}
+                        <li key={index}
                             onMouseEnter={() => setActiveIndex(index)}
                             className={activeOption === index ? 'Selected' : ''}
                         >
@@ -46,6 +45,6 @@ export const Header = () => {
             <div className="Right-Container">
                 
             </div>
-        </header>
+        </div>
     )
 }

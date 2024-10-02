@@ -1,5 +1,5 @@
 import { Footer } from "./Components/Footer.jsx";
-import { Header } from "./Components/Header.jsx";
+import { Banner } from "./Components/Banner.jsx";
 import { Home } from "./Pages/Home.jsx";
 import './Styles/Styles.scss';
 
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <Header/>
+      <Banner/>
       <Home/>
       <Footer/>
     </div>

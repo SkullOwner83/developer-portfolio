@@ -2,10 +2,9 @@
 body {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    
-    background-image: linear-gradient(45deg, #131014, #302542, );
+    -moz-osx-font-smoothing: grayscale;    
     color: white;
+    background-image: linear-gradient(45deg, #131014, #302542);
 }
 
 * {
@@ -20,9 +19,4 @@ ol, ul, li {
 
 a {
     text-decoration: none;
-}
-
-
-header {
-    height: 100vh;
 }
