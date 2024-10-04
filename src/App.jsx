@@ -1,6 +1,7 @@
 import { Footer } from "./Components/Footer.jsx";
 import { Banner } from "./Components/Banner.jsx";
 import { Home } from "./Pages/Home.jsx";
+import { TechProvider } from "./Contexts/TechContext.jsx";
 import './Styles/Styles.scss';
 
 function App() {
@@ -8,7 +9,11 @@ function App() {
   return (
     <div>
       <Banner/>
-      <Home/>
+
+      <TechProvider>
+        <Home/>
+      </TechProvider>
+
       <Footer/>
     </div>
   )

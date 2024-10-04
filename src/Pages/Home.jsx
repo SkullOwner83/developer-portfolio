@@ -1,11 +1,10 @@
+import { useContext } from "react";
 import { Carousel } from "../Components/Carousel"
 import { TechDetails } from "../Components/TechDetails";
-import { useRef } from "react";
-import { useState } from "react";
-import technologies from "../Data/Technologies.js";
+import { TechContext } from "../Contexts/TechContext";
 
 export const Home = () => {
-    const [currentTech, setCurrentTech] = useState(technologies.HTML);
+    const { currentTech, setCurrentTech, Technologies } = useContext(TechContext);
 
     const TechStackImages = [
         "../../src/Assets/Logos/C Sharp.png",
@@ -22,8 +21,6 @@ export const Home = () => {
         "../../src/Assets/Logos/Game Maker Studio 2.png"
     ]
 
-    const technologiesSectionRef = useRef(null);
-
     return (
         <main>
             <section>
@@ -32,9 +29,10 @@ export const Home = () => {
             </section>
 
             <div className="Solid-Background">
-                <section className="TechStack-Section" ref={technologiesSectionRef}>
+                <section className="TechStack-Section">
                     <h2>TECNOLOGÍAS</h2>
                     <Carousel Items={TechStackImages} Size={80} Gap={24}/>
+
                     <div className="Grid-Wrap">
                         <TechDetails Technology={currentTech}/>
 
@@ -42,19 +40,33 @@ export const Home = () => {
                             <div>
                                 <p className="Subtitle">APRENDIENDO</p>
                                 <div className="Flex-Wrap">
-                                    <img src="../../src/Assets/Logos/Python.png"/>
-                                    <img src="../../src/Assets/Logos/C Plus Plus.png"/>
-                                    <img src="../../src/Assets/Logos/Typescript.png"/>
-                                    <img src="../../src/Assets/Logos/Unity.png"/>
+
+                                    {/* Print only learning technologies from the list*/}
+                                    {Object.values(Technologies).map((item, index) => (
+                                        item.Section == "Learning" ? (
+                                            <img 
+                                                key={index} 
+                                                src={item.IconPath}
+                                                onClick={() => setCurrentTech(item)}
+                                            />
+                                        )
+                                        : null
+                                    ))}
                                 </div>
                             </div>
                             <div>
                                 <p className="Subtitle">DISEÑO</p>
                                 <div className="Flex-Wrap">
-                                    <img src="../../src/Assets/Logos/Photoshop.png"/>
-                                    <img src="../../src/Assets/Logos/Illustrator.png"/>
-                                    <img src="../../src/Assets/Logos/XD.png"/>
-                                    <img src="../../src/Assets/Logos/Figma.png"/>
+                                    {Object.values(Technologies).map((item, index) => (
+                                            item.Section == "Design" ? (
+                                                <img 
+                                                    key={index} 
+                                                    src={item.IconPath}
+                                                    onClick={() => setCurrentTech(item)}
+                                                />
+                                            )
+                                            : null
+                                        ))}
                                 </div>
                             </div>
                         </div>
