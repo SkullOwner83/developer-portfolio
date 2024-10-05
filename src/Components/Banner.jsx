@@ -5,7 +5,7 @@ import { ScrollToComponent } from "../Functions";
 export const Banner = () => {
     //window.open('https://drive.usercontent.google.com/download?id=1lI-V3yQ1eC7SwhAQYlkElD_ltRUovpBM&export=download&authuser=0&confirm=t&uuid=3102a3e6-0a35-432b-9cdb-faf0aa7574cc&at=AN_67v3yWwnkqIILGvsauQuLCREs:1727677563401" target="blank', '_blank')
     const [activeOption, setActiveIndex] = useState(0);
-    const { techstackRef } = useContext(TechContext)
+    const { techstackRef, experienceRef } = useContext(TechContext)
 
     const menuOptions = {
         startGame: {
@@ -15,12 +15,12 @@ export const Banner = () => {
 
         Technologies: {
             Name: "Tecnologías",
-            Function: () => { ScrollToComponent(techstackRef) }
+            Function: () => { ScrollToComponent(techstackRef); }
         },
 
         Experience: {
             Name: "Experiencia",
-            Function: () => { }
+            Function: () => { ScrollToComponent(experienceRef); }
         },
 
         Projects: {

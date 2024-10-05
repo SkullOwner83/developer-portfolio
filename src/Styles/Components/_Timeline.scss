@@ -1,0 +1,48 @@
+.Timeline-Componet {
+    display: grid;
+    
+    .Timeline-Node {
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        .Timeline-Line {
+            grid-column: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(5px);
+            
+            .Node-Dot {
+                width: 16px;
+                height: 16px;
+                flex-shrink: 0;
+                background-color: white;
+                border-radius: 100%;
+                
+            }
+    
+            .Node-line {
+                background-color: white;
+                width: 2px;
+                height: 100%;
+            }
+        }
+
+        .Info-Container {
+            grid-column: 2;
+            padding: 0 0 32px 32px;
+
+            .Date {
+                color: gray;
+            }
+        }
+    }
+
+    .Title {
+        font-weight: bold;
+    }
+
+    .Date {
+        text-align: right;
+    }
+}

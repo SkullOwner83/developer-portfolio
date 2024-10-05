@@ -2,9 +2,10 @@ import { useContext } from "react";
 import { Carousel } from "../Components/Carousel"
 import { TechDetails } from "../Components/TechDetails";
 import { TechContext } from "../Contexts/TechContext";
+import { Timeline } from "../Components/Timeline";
 
 export const Home = () => {
-    const { currentTech, setCurrentTech, Technologies, techstackRef} = useContext(TechContext);
+    const { currentTech, setCurrentTech, techstackRef, experienceRef, Technologies, Experience} = useContext(TechContext);
 
     return (
         <main>
@@ -58,6 +59,11 @@ export const Home = () => {
                     </div>
                 </section>
             </div>
+
+            <section ref={experienceRef}>
+                <h3>Experiencia</h3>
+                <Timeline Nodes={Experience}/>
+            </section>
         </main>
     )
 }
