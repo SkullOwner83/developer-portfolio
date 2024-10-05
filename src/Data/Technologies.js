@@ -99,10 +99,10 @@ const technologies = {
     },
 
     GameMaker: {
-        Name: "Game Maker Studio 2",
+        Name: "Game Maker",
         Type: "Entorno de desarrollo integrado",
         IconPath: "../../src/Assets/Logos/Game Maker Studio 2.png",
-        Experience: "4 años",
+        Experience: "8 años",
         Level: "Alto",
         Section: "Main"
     },

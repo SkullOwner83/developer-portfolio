@@ -43,3 +43,17 @@
 .Flex-Wrap {
     @include Flex-Wrap();
 }
+
+//Function to change the content styles when the screen width is very small
+@mixin ScreenMinWidth($MinWidth: $ScreenMinWidth) {
+    @media screen and (max-width: $MinWidth) {
+        @content
+    }
+};
+
+//Function to change the content styles when the screen height is very small
+@mixin ScreenMinHeight($MinHeight) {
+    @media screen and (max-height: $MinHeight) {
+        @content
+    }
+};

@@ -8,13 +8,11 @@ function App() {
 
   return (
     <div>
-      <Banner/>
-
       <TechProvider>
+        <Banner/>
         <Home/>
+        <Footer/>
       </TechProvider>
-
-      <Footer/>
     </div>
   )
 }

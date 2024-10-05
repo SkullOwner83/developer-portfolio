@@ -12,6 +12,10 @@
             100% { transform: translateX(-100%); }
         }
 
+        &.Animation-Stopped {
+            animation-play-state: paused;
+        }
+
         .Carousel-Item {
             width: 96px;
             height: 96px;
@@ -20,8 +24,6 @@
             img {
                 width: 100%;
                 user-select: none;
-
-                
             }
         }
     }
