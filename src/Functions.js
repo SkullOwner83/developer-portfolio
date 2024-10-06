@@ -31,3 +31,12 @@ export function useLocalStorage(Key, InitialValue) {
 export function ScrollToComponent(Ref) {
     Ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+
+//Play sound or restart time if is playing to play it again
+export const PlaySound = ( sound ) => {
+    if (sound.currentTime > 0) {
+        sound.play();
+      } else {
+        sound.currentTime = 0;
+      }
+};

@@ -10,7 +10,7 @@ export const Home = () => {
     return (
         <main>
             <section>
-                <h1>SOBRE MI</h1>
+                <h1>SOBRE MÍ</h1>
                 <p>Soy una persona apasionada por la tecnología y las herramientas digitales, asi como el desarrollo de aplicaciones y videojuegos. Además, estoy en una constante búsqueda de nuevo conocimiento y desarrollo profesional.</p>
             </section>
 

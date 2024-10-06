@@ -10,19 +10,36 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            transform: translateY(5px);
+            transform: translateY(2px);
             
-            .Node-Dot {
-                width: 16px;
-                height: 16px;
+            .Node-Circle {
+                position: relative;
+                width: 20px;
+                height: 20px;
                 flex-shrink: 0;
-                background-color: white;
                 border-radius: 100%;
-                
+                border: 2px solid gray;
+
+                .Circle-Node {
+                    position: absolute;
+                    display: inline-block;
+                    border-radius: 100%;
+                    left: 50%; top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 60%;
+                    height: 60%;
+
+                    @keyframes Flicker {
+                        0% { background-color: var(--color); }
+                        10% { background-color: white; }
+                        20% { background-color: var(--color); }
+                        100% { background-color: var(--color); }
+                    }
+                }
             }
     
             .Node-line {
-                background-color: white;
+                background-color: gray;
                 width: 2px;
                 height: 100%;
             }
@@ -32,8 +49,18 @@
             grid-column: 2;
             padding: 0 0 32px 32px;
 
-            .Date {
-                color: gray;
+            .Header-Container {
+                display: grid;
+                grid-template-columns: auto 1fr 1fr;
+
+                img {
+                    width: 24px;
+                    margin-right: 8px;
+                }
+
+                .Date {
+                    color: gray;
+                }
             }
         }
     }

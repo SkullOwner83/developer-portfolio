@@ -48,7 +48,7 @@ const technologies = {
         Name: "React",
         Type: "Biblioteca",
         IconPath: "../../src/Assets/Logos/React.png",
-        Experience: "1 años",
+        Experience: "1 año",
         Level: "Medio",
         Section: "Main"
     },
@@ -57,7 +57,7 @@ const technologies = {
         Name: "Vite",
         Type: "Empaquetador",
         IconPath: "../../src/Assets/Logos/Vite.png",
-        Experience: "1 años",
+        Experience: "1 año",
         Level: "Alto",
         Section: "Main"
     },
@@ -73,7 +73,7 @@ const technologies = {
 
     MySQL: {
         Name: "MySQL",
-        Type: "Sistema de gestion de base de datos",
+        Type: "Sistema de gestión de base de datos",
         IconPath: "../../src/Assets/Logos/My SQL.png",
         Experience: "3 años",
         Level: "Medio",
@@ -91,9 +91,9 @@ const technologies = {
 
     Boostrap: {
         Name: "Boostrap",
-        Type: "Framekwork",
+        Type: "Framework",
         IconPath: "../../src/Assets/Logos/Boostrap.png",
-        Experience: "1 años",
+        Experience: "1 año",
         Level: "Medio",
         Section: "Main"
     },
@@ -111,7 +111,7 @@ const technologies = {
         Name: "Python",
         Type: "Lenguaje de programación",
         IconPath: "../../src/Assets/Logos/Python.png",
-        Experience: "1 años",
+        Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
     },
@@ -129,7 +129,7 @@ const technologies = {
         Name: "Typescript",
         Type: "Lenguaje de programación",
         IconPath: "../../src/Assets/Logos/Typescript.png",
-        Experience: "1 años",
+        Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
     },
@@ -138,7 +138,7 @@ const technologies = {
         Name: "Unity",
         Type: "Entorno de desarrollo integrado",
         IconPath: "../../src/Assets/Logos/Unity.png",
-        Experience: "1 años",
+        Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
     },
