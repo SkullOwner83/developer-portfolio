@@ -1,5 +1,5 @@
 //Styles for convencional buttons
-@mixin Convencional-Button($Color: rgb(155, 55, 227)) {
+@mixin Convencional-Button($Color: $secondaryColor) {
     font-size: 18px;
     color: white;
     background-color: $Color;

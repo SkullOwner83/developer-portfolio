@@ -8,7 +8,7 @@ export const TechDetails = ({ Technology }) => {
     const technology = Technology || defaultTech;
     
     return (
-        <div className="Tech-Details">
+        <div className="TechDetails-Component">
             <div className="Icon-Container">
                 <img src={technology.IconPath}/>
             </div>

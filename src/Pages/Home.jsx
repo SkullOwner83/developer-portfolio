@@ -3,9 +3,10 @@ import { Carousel } from "../Components/Carousel"
 import { TechDetails } from "../Components/TechDetails";
 import { TechContext } from "../Contexts/TechContext";
 import { Timeline } from "../Components/Timeline";
+import { Gallery } from "../Components/Gallery";
 
 export const Home = () => {
-    const { currentTech, setCurrentTech, techstackRef, experienceRef, Technologies, Experience} = useContext(TechContext);
+    const { currentTech, setCurrentTech, techstackRef, experienceRef, projectsRef, Technologies, Experience, Projects } = useContext(TechContext);
 
     return (
         <main>
@@ -61,8 +62,13 @@ export const Home = () => {
             </div>
 
             <section ref={experienceRef}>
-                <h3>Experiencia</h3>
+                <h3>EXPERIENCIA</h3>
                 <Timeline Nodes={Experience}/>
+            </section>
+
+            <section ref={projectsRef}>
+                <h4>PROYECTOS</h4>
+                <Gallery Nodes={Projects}/>
             </section>
         </main>
     )

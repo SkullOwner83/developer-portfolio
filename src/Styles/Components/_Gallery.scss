@@ -1,0 +1,43 @@
+.Gallery-Component {
+    @include Grid-Wrap(350px, 32px);
+
+    .Item-Container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: $backgroundGradient;
+        border: 2px solid $bordersColor;
+        border-radius: 12px;
+        overflow: hidden;
+
+        .Image-Container {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .Info-Container {
+            padding: 32px;
+
+            .Text-Container {
+                margin-bottom: 32px;
+
+                .Subtitle {
+                    border-bottom: 2px solid $bordersColor;
+                    padding-bottom: 4px;;
+                    margin-bottom: 0;
+                }
+            }
+
+            .Buttons-Container {
+                width: 100%;
+                @include Grid-Wrap(120px, 32px);
+    
+                a div {
+                    height: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

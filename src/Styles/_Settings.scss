@@ -2,10 +2,12 @@ $primaryFont: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 $secondaryFont: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 //Colors variables
-$primaryColor: rgb(215, 55, 194);
-$secondaryColor: rgb(56, 158, 236);
-$shadow: rgba(0, 0, 0, 0.3);
+$primaryColor: #009afb;
+$secondaryColor: #ef28c1;
+$bordersColor: #665c6f;
 $backgroundGradient: linear-gradient(45deg, #131014, #302542);
+
+$shadow: rgba(0, 0, 0, 0.3);
 
 //Size variables
 $FontSize: 1.3rem;

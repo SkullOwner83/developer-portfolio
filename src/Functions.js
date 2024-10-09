@@ -27,11 +27,6 @@ export function useLocalStorage(Key, InitialValue) {
     return [StoredValue, SetValue];
 }
 
-//Scroll to component indicated
-export function ScrollToComponent(Ref) {
-    Ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
 //Play sound or restart time if is playing to play it again
 export const PlaySound = ( sound ) => {
     if (sound.currentTime > 0) {

@@ -39,9 +39,10 @@
             }
     
             .Node-line {
-                background-color: gray;
+                background-color: $bordersColor;
                 width: 2px;
                 height: 100%;
+                position: relative;
             }
         }
 

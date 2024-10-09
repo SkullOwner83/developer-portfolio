@@ -1,6 +1,6 @@
-.Tech-Details {
-    border: 2px solid gray;
-    border-radius: 10px;    
+.TechDetails-Component {
+    border: 2px solid $bordersColor;
+    border-radius: 12px;
     @include Grid-Wrap(150px, 0);
 
     .Icon-Container {
@@ -43,7 +43,7 @@
                 text-transform: uppercase;
                 text-align: center;
                 margin-bottom: 16px;
-                border-bottom: 2px solid gray;
+                border-bottom: 2px solid $bordersColor;
             }
         }
     }
