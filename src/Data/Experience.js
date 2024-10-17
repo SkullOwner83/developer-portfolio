@@ -5,7 +5,7 @@ const ExperienceTimeline = {
         Icon: "../../src/Assets/Icons/Opera GX.png",
         Date:"Agosto 2021 - Agosto 2021",
         Technologies: "Game Maker Studio 2",
-        Color: "Red"
+        Color: "#ff1313"
     },
 
     SIA: {
@@ -14,7 +14,7 @@ const ExperienceTimeline = {
         Icon: "../../src/Assets/Icons/SIA.png",
         Date:"Abril 2022 - Junio 2024",
         Technologies: "C# | XAML | MySQL",
-        Color: "Orange"
+        Color: "#ff7b00"
     },
 
     UNID: {
@@ -23,7 +23,7 @@ const ExperienceTimeline = {
         Icon: "../../src/Assets/Icons/UNID.png",
         Date:"Agosto - Septiembre 2022",
         Technologies: "HTML | CSS",
-        Color: "Blue"
+        Color: "#0655dd"
     },
 
     RemixContest: {
@@ -32,7 +32,7 @@ const ExperienceTimeline = {
         Icon: "../../src/Assets/Icons/Remix Contest.png",
         Date:"Abril 2024 - Mayo 2024",
         Technologies: "React | SASS",
-        Color: "Purple"
+        Color: "#ef28c1"
     },
 
     Rainde: {
@@ -41,7 +41,7 @@ const ExperienceTimeline = {
         Date: "Junio 2024 - Octubre 2024",
         Icon: "../../src/Assets/Icons/Rainde.png",
         Technologies: "ASP.NET | GIT | SQL Server",
-        Color: "Yellow"
+        Color: "#f8d300"
     }
 }
 

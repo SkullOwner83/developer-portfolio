@@ -29,7 +29,7 @@ export const Timeline = ({ Nodes }) => {
                         </div>
                         
                         <p>{item.Description}</p>
-                        <p>Tecnologías usadadas: {item.Technologies}</p>
+                        <p>Tecnologías usadadas: <strong>{item.Technologies}</strong></p>
                     </div>
                 </div>
             ))}

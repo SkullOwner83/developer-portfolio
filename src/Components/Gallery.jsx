@@ -1,17 +1,46 @@
 import PropTypes from "prop-types";
+import { Modal } from "./Modal";
+import { useState } from "react";
 
 export const Gallery = ({ Nodes }) => {
+    const [currentModalImage, setCurrentModalImage] = useState(null);
+    const [toggleModal, setToggleModal] = useState(false);
+
+    function GetStateColor(State) {
+        switch (State) {
+            case "Terminado":
+              return { backgroundColor: "#17c42e" };
+            case "Desarrollando":
+              return { backgroundColor: "#0687dd" };
+            case "Pausado":
+              return { backgroundColor: "#f8d300" };
+            default:
+              return { backgroundColor: "Gray" };
+        }
+    }
+
     return (
         <div className="Gallery-Component">
             {Object.values(Nodes).map((item, index) => (
                 <div key={index} className="Item-Container">
-                    <div className="Image-Container" style={{backgroundImage: `${item.Image}`}}/>
+                    <div className="Image-Container">
+                        <div className="State-Container">
+                            <div style={GetStateColor(item.State)}/>
+                            <p>{item.State}</p>
+                        </div>
+
+                        <div 
+                            className="Image-Background" 
+                            style={{backgroundImage: `url(${encodeURI(item.Image)}`}}
+                            onClick={() => { setCurrentModalImage(item.Image); setToggleModal(true) }}
+                            />
+                    </div>
 
                     <div className="Info-Container">
                         <div className="Text-Container">
                             <p className="Subtitle">{item.Name}</p>
                             <p>{item.Description}</p>
-                            <p>Tecnologías: {item.Technologies}</p>
+                            <p>Tecnologías: <strong>{item.Technologies}</strong></p>
                         </div>
 
                         <div className="Buttons-Container">
@@ -22,6 +51,8 @@ export const Gallery = ({ Nodes }) => {
                     </div>
                 </div>
             ))}
+
+            <Modal Image={currentModalImage} isVisible={toggleModal} onToggleVisibility={setToggleModal}/>
         </div>
     );
 }
