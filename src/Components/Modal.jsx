@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import ImgClose from '../Assets/Icons/Close.svg';
 import PropTypes from "prop-types"
 
 export const Modal = ({ Image, className, isVisible, onToggleVisibility }) => {
@@ -38,7 +37,7 @@ export const Modal = ({ Image, className, isVisible, onToggleVisibility }) => {
         <div className={isVisible ? `Modal-Component Visible ${className}` : `Modal-Component ${className}`}>
             <div className="Modal-Overlay" onClick={toggleVisibility}/>
             <div className="Modal-Content" style={{backgroundImage: `url(${encodeURI(Image)})`}}>
-                <button onClick={toggleVisibility}><img src={ImgClose}/></button>
+                <button onClick={toggleVisibility}><img src="/Icons/Close.svg"/></button>
             </div>
         </div>
     )

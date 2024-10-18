@@ -2,7 +2,7 @@ const technologies = {
     CSharp: {
         Name: "C#",
         Type: "Lenguaje de programación",
-        IconPath: "../../src/Assets/Logos/C Sharp.png",
+        IconPath: "/Logos/C Sharp.png",
         Experience: "4 años",
         Level: "Avanzado",
         Section: "Main"
@@ -11,7 +11,7 @@ const technologies = {
     XAML: {
         Name: "XAML",
         Type: "Lenguaje de marcado",
-        IconPath: "../../src/Assets/Logos/XAML.png",
+        IconPath: "/Logos/XAML.png",
         Experience: "3 años",
         Level: "Avanzado",
         Section: "Main"
@@ -20,7 +20,7 @@ const technologies = {
     HTML: {
         Name: "HTML",
         Type: "Lenguaje de marcado",
-        IconPath: "../../src/Assets/Logos/HTML.png",
+        IconPath: "/Logos/HTML.png",
         Experience: "6 años",
         Level: "Avanzado",
         Section: "Main"
@@ -29,7 +29,7 @@ const technologies = {
     CSS: {
         Name: "CSS",
         Type: "Lenguaje de estilos",
-        IconPath: "../../src/Assets/Logos/CSS.png",
+        IconPath: "/Logos/CSS.png",
         Experience: "6 años",
         Level: "Avanzado",
         Section: "Main"
@@ -38,7 +38,7 @@ const technologies = {
     Javascript: {
         Name: "Javascript",
         Type: "Lenguaje de programación",
-        IconPath: "../../src/Assets/Logos/Javascript.png",
+        IconPath: "/Logos/Javascript.png",
         Experience: "2 años",
         Level: "Medio",
         Section: "Main"
@@ -47,7 +47,7 @@ const technologies = {
     React: {
         Name: "React",
         Type: "Biblioteca",
-        IconPath: "../../src/Assets/Logos/React.png",
+        IconPath: "/Logos/React.png",
         Experience: "1 año",
         Level: "Medio",
         Section: "Main"
@@ -56,7 +56,7 @@ const technologies = {
     Vite: {
         Name: "Vite",
         Type: "Empaquetador",
-        IconPath: "../../src/Assets/Logos/Vite.png",
+        IconPath: "/Logos/Vite.png",
         Experience: "1 año",
         Level: "Alto",
         Section: "Main"
@@ -65,7 +65,7 @@ const technologies = {
     Git: {
         Name: "Git",
         Type: "Sistema de control de versiones",
-        IconPath: "../../src/Assets/Logos/Git.png",
+        IconPath: "/Logos/Git.png",
         Experience: "3 años",
         Level: "Alto",
         Section: "Main"
@@ -74,7 +74,7 @@ const technologies = {
     MySQL: {
         Name: "MySQL",
         Type: "Sistema de gestión de base de datos",
-        IconPath: "../../src/Assets/Logos/My SQL.png",
+        IconPath: "/Logos/My SQL.png",
         Experience: "3 años",
         Level: "Medio",
         Section: "Main"
@@ -83,7 +83,7 @@ const technologies = {
     Sass: {
         Name: "Sass",
         Type: "Preprocesador",
-        IconPath: "../../src/Assets/Logos/Sass.png",
+        IconPath: "/Logos/Sass.png",
         Experience: "2 años",
         Level: "Avanzado",
         Section: "Main"
@@ -92,7 +92,7 @@ const technologies = {
     Boostrap: {
         Name: "Boostrap",
         Type: "Framework",
-        IconPath: "../../src/Assets/Logos/Boostrap.png",
+        IconPath: "/Logos/Boostrap.png",
         Experience: "1 año",
         Level: "Medio",
         Section: "Main"
@@ -101,7 +101,7 @@ const technologies = {
     GameMaker: {
         Name: "Game Maker",
         Type: "Entorno de desarrollo integrado",
-        IconPath: "../../src/Assets/Logos/Game Maker Studio 2.png",
+        IconPath: "/Logos/Game Maker Studio 2.png",
         Experience: "8 años",
         Level: "Alto",
         Section: "Main"
@@ -110,7 +110,7 @@ const technologies = {
     Python: {
         Name: "Python",
         Type: "Lenguaje de programación",
-        IconPath: "../../src/Assets/Logos/Python.png",
+        IconPath: "/Logos/Python.png",
         Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
@@ -119,7 +119,7 @@ const technologies = {
     CPlusPlus: {
         Name: "C++",
         Type: "Lenguaje de programación",
-        IconPath: "../../src/Assets/Logos/C Plus Plus.png",
+        IconPath: "/Logos/C Plus Plus.png",
         Experience: "3 años",
         Level: "Bajo",
         Section: "Learning"
@@ -128,7 +128,7 @@ const technologies = {
     Typescript: {
         Name: "Typescript",
         Type: "Lenguaje de programación",
-        IconPath: "../../src/Assets/Logos/Typescript.png",
+        IconPath: "/Logos/Typescript.png",
         Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
@@ -137,7 +137,7 @@ const technologies = {
     Unity: {
         Name: "Unity",
         Type: "Entorno de desarrollo integrado",
-        IconPath: "../../src/Assets/Logos/Unity.png",
+        IconPath: "/Logos/Unity.png",
         Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
@@ -146,7 +146,7 @@ const technologies = {
     Photoshop: {
         Name: "Photoshop",
         Type: "Diseño gráfico",
-        IconPath: "../../src/Assets/Logos/Photoshop.png",
+        IconPath: "/Logos/Photoshop.png",
         Experience: "7 años",
         Level: "Alto",
         Section: "Design"
@@ -155,7 +155,7 @@ const technologies = {
     Illustrator: {
         Name: "Illustrator",
         Type: "Diseño vectorial",
-        IconPath: "../../src/Assets/Logos/Illustrator.png",
+        IconPath: "/Logos/Illustrator.png",
         Experience: "4 años",
         Level: "Medio",
         Section: "Design"
@@ -164,7 +164,7 @@ const technologies = {
     XD: {
         Name: "XD",
         Type: "Prototipado de interfaces",
-        IconPath: "../../src/Assets/Logos/XD.png",
+        IconPath: "/Logos/XD.png",
         Experience: "2 años",
         Level: "Medio",
         Section: "Design"
@@ -173,7 +173,7 @@ const technologies = {
     Figma: {
         Name: "Figma",
         Type: "Prototipado de interfaces",
-        IconPath: "../../src/Assets/Logos/Figma.png",
+        IconPath: "/Logos/Figma.png",
         Experience: "2 años",
         Level: "Medio",
         Section: "Design"

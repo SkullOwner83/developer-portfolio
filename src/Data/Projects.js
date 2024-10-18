@@ -6,7 +6,7 @@ const Projects = {
         Website: "https://solotu-remixcontest.web.app/",
         CodeLink: "https://github.com/SkullOwner83/remix-contest",
         State: "Terminado",
-        Image: "../../src/Assets/Gallery/Solo Tu.png"
+        Image: "/Gallery/Solo Tu.png"
     },
 
     Scriptcraft: {
@@ -15,7 +15,7 @@ const Projects = {
         Technologies: "C# | XAML",
         State: "Desarrollando",
         DownloadLink: "",
-        Image: "../../src/Assets/Gallery/Scriptcraft.png"
+        Image: "/Gallery/Scriptcraft.png"
     },
 
     PointSale: {
@@ -23,7 +23,7 @@ const Projects = {
         Description: "Sistema punto de venta de escritorio para la gestión de los recursos de un negocio.",
         Technologies: "C# | XAML | MySQL",
         State: "Pausado",
-        Image: "../../src/Assets/Gallery/Punto de venta.png"
+        Image: "/Gallery/Punto de venta.png"
     },
 
     SIAWebsite: {
@@ -31,7 +31,7 @@ const Projects = {
         Description: "Propuestad e implementación de una single page aplication para servicios informaticos.",
         Technologies: "C# | XAML | MySQL",
         State: "Pausado",
-        Image: "../../src/Assets/Gallery/Sia website.png"
+        Image: "/Gallery/Sia website.png"
     },
 
     Cinemovies: {
@@ -40,7 +40,7 @@ const Projects = {
         Technologies: "HTML | CSS | Javascript",
         State: "Pausado",
         CodeLink: "https://github.com/SkullOwner83/Cinemovies",
-        Image: "../../src/Assets/Gallery/Cinemovies.png"
+        Image: "/Gallery/Cinemovies.png"
     },
 
     BotBonito: {
@@ -49,7 +49,7 @@ const Projects = {
         Technologies: "Python",
         CodeLink: "https://github.com/SkullOwner83/botbonito",
         State: "Terminado",
-        Image: "../../src/Assets/Gallery/Botbonito.png"
+        Image: "/Gallery/Botbonito.png"
     },
 
     UFOInvader: {
@@ -58,7 +58,7 @@ const Projects = {
         Technologies: "Game Maker Studio 2",
         Website: "https://gamejolt.com/games/uffo_invader/639334",
         State: "Terminado",
-        Image: "../../src/Assets/Gallery/Ufo Invader.jpg"
+        Image: "/Gallery/Ufo Invader.jpg"
     },
 
     PacMan: {
@@ -67,7 +67,7 @@ const Projects = {
         Technologies: "Game Maker Studio 2",
         State: "Pausado",
         CodeLink: "https://github.com/SkullOwner83/Pac-Man",
-        Image: "../../src/Assets/Gallery/Pacman.png"
+        Image: "/Gallery/Pacman.png"
     }
 };
 

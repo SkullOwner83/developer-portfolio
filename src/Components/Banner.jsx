@@ -75,8 +75,8 @@ export const Banner = () => {
                 </ul>
 
                 <div className="Logos-Container">
-                    <a href="https://github.com/SkullOwner83" title="Pefil de Github" target="_blank"><img src="../../src/Assets/Icons/Github.png" alt="Github"/></a>
-                    <a href="https://gamejolt.com/@SkullOwner/games" title="Perfil de Gamejolt" target="_blank"><img src="../../src/Assets/Icons/Gamejolt.png" alt="Gamejolt"/></a>
+                    <a href="https://github.com/SkullOwner83" title="Pefil de Github" target="_blank"><img src="/Icons/Github.png" alt="Github"/></a>
+                    <a href="https://gamejolt.com/@SkullOwner/games" title="Perfil de Gamejolt" target="_blank"><img src="/Icons/Gamejolt.png" alt="Gamejolt"/></a>
                 </div>
             </div>
 
