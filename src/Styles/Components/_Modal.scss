@@ -21,7 +21,6 @@
         width: 80%;
         aspect-ratio: 16 / 9;
         max-height: 80vh;
-        background-color: white;
         border-radius: 12px;
         overflow: hidden;
 
@@ -29,18 +28,17 @@
         left: 50%; top: 50%;
         transform: translate(-50%, -50%);
         box-shadow: 0 0 20px rgba(black, 0.5);
-        background-position: center;
-        background-size: cover;
         @include Centered-Container();
 
         animation-name: EntryImage;
         animation-duration: 0.5s;
         animation-timing-function: ease;
 
-        img {
+        & > div {
             width: 100%;
-            height: 100%;          
-            object-fit: contain;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
         }
 
         button {

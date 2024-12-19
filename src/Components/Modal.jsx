@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import PropTypes from "prop-types"
 
-export const Modal = ({ Image, className, isVisible, onToggleVisibility }) => {
+export const Modal = ({ children, className, isVisible, onToggleVisibility }) => {
     const [isActive, setIsActive] = useState(true);
 
     //Block the scroll of the page if the modal is visible
@@ -36,7 +36,8 @@ export const Modal = ({ Image, className, isVisible, onToggleVisibility }) => {
     return (
         <div className={isVisible ? `Modal-Component Visible ${className}` : `Modal-Component ${className}`}>
             <div className="Modal-Overlay" onClick={toggleVisibility}/>
-            <div className="Modal-Content" style={{backgroundImage: `url(${encodeURI(Image)})`}}>
+            <div className="Modal-Content">
+                {children}
                 <button onClick={toggleVisibility}><img src="/Icons/Close.svg"/></button>
             </div>
         </div>
@@ -44,7 +45,7 @@ export const Modal = ({ Image, className, isVisible, onToggleVisibility }) => {
 }
 
 Modal.propTypes = {
-    Image: PropTypes.Image,
+    children: PropTypes.node,
     className: PropTypes.string,
     isVisible: PropTypes.bool,
     onToggleVisibility: PropTypes.func

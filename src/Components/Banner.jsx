@@ -3,17 +3,16 @@ import { TechContext } from "../Contexts/TechContext";
 import { PlaySound } from "../Functions";
 
 export const Banner = () => {
-    //window.open('https://drive.usercontent.google.com/download?id=1lI-V3yQ1eC7SwhAQYlkElD_ltRUovpBM&export=download&authuser=0&confirm=t&uuid=3102a3e6-0a35-432b-9cdb-faf0aa7574cc&at=AN_67v3yWwnkqIILGvsauQuLCREs:1727677563401" target="blank', '_blank')
     const [activeOption, setActiveIndex] = useState(0);
     const { techstackRef, experienceRef, projectsRef } = useContext(TechContext)
 
-    const sndMenuRef = useRef(new Audio("../../src/Assets/Menu.wav")).current;
+    const sndMenuRef = useRef(new Audio("/Menu.wav")).current;
     sndMenuRef.volume = 1;
 
     const menuOptions = {
         startGame: {
             Name: "Iniciar juego",
-            Function: () => {  }
+            Function: () => { alert("Portafolio en desarrollo. Algunas funciones aun no estan disponibles."); }
         },
 
         Technologies: {
@@ -50,8 +49,12 @@ export const Banner = () => {
                         </div>
                         
                         <div className="Buttons-Container">
-                            <button className="Convencional-Button">Curriculum</button>
-                            <button className="Outlined-Button">Contacto</button>
+                            <a href="https://drive.usercontent.google.com/download?id=1kGy_7Lya8GEbf0pgRxrChZ9jh-Rx96oO&export=download&authuser=0&confirm=t&uuid=ac28a554-b37b-4da5-aa1d-ae97d84a6c7e&at=AN_67v0RF1gh4zHORFy9Sl0WEicV:1729331899253">
+                                <div className="Convencional-Button">Curriculum</div>
+                            </a>
+                            <a href="mailto:skullowner83@gmail.com">
+                                <div className="Outlined-Button">Contacto</div>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -6,26 +6,29 @@
     position: relative;
     height: 100vh;
 
+    @include ScreenMinWidth($MobileResolution) {
+        grid-template-columns: 50% 50%;
+    }
+
     .Left-Container {
         grid-column: 1 / span 2;
         display: flex;
         position: relative;
         flex-direction: column;
         justify-content: center;
-        padding: 15%;
+        padding: 10%;
         height: 100%;
         gap: 64px;
+        @include DebugBorders();
 
         .Info-Container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            height: 150px;
-            gap: 32px;
+            @include Flex-Wrap(32px, center);
+            @include DebugBorders();
 
             .Photo-Container {
                 width: 150px;
                 height: 150px;
+                aspect-ratio: 1 / 1;
                 border-radius: 100%;                
                 border: 3px solid white;
 
@@ -37,25 +40,30 @@
             .Biografy-Container {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
                 font-size: 32px;
-                                
+                gap: 16px;
+                @include DebugBorders(green);
+
                 .Biografy-Name { font-weight: bold; }
                 .Biografy-Description { color: $primaryColor; }
             }
         
             .Buttons-Container {
                 display: flex;
-                gap: 16px;                        
+                gap: 16px;
                 
-                button { min-width: 150px; }
+                .Convencional-Button, .Outlined-Button { 
+                    min-width: 150px; 
+                    text-align: center;
+                }
             }
         }
 
         ul {
             display: flex;
             flex-direction: column;
-            align-items: center;            
+            align-items: center;
+            @include DebugBorders();
 
             li {
                 color: rgb(180, 180, 180);
@@ -124,5 +132,6 @@
         background-image: url("/Background Image.jpg");        
         background-size: cover;
         background-position: center;
+        @include DebugBorders();
     }
 }

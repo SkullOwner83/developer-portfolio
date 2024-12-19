@@ -32,7 +32,7 @@ export const Gallery = ({ Nodes }) => {
                         <div 
                             className="Image-Background" 
                             style={{backgroundImage: `url(${encodeURI(item.Image)}`}}
-                            onClick={() => { setCurrentModalImage(item.Image); setToggleModal(true) }}
+                            onClick={() => { setCurrentModalImage(item.Image); setToggleModal(true); }}
                             />
                     </div>
 
@@ -52,7 +52,9 @@ export const Gallery = ({ Nodes }) => {
                 </div>
             ))}
 
-            <Modal Image={currentModalImage} isVisible={toggleModal} onToggleVisibility={setToggleModal}/>
+            <Modal isVisible={toggleModal} onToggleVisibility={setToggleModal}>
+                <div style={{backgroundImage: `url(${encodeURI(currentModalImage)})`}}/>
+            </Modal>
         </div>
     );
 }

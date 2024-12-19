@@ -2,6 +2,8 @@
     width: 100%;    
     display: flex;
     overflow: hidden;
+    user-select: none;
+    @include DebugBorders();
 
     .Items-Container {
         display: flex;
@@ -20,6 +22,10 @@
             width: 96px;
             height: 96px;
             padding: 12px;
+
+            @include ScreenMinWidth(800px) {
+                width: 90%;
+            }
 
             img {
                 width: 100%;

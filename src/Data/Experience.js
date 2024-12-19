@@ -21,7 +21,7 @@ const ExperienceTimeline = {
         Title: "Universidad Interamericana para el Desarrollo",
         Description: "Colaboración en el desarrollo front end de la sección de experiencia estudiantil del sitio web de la universidad.",
         Icon: "/Icons/UNID.png",
-        Date:"Agosto - Septiembre 2022",
+        Date:"Agosto 2022 - Septiembre 2022",
         Technologies: "HTML | CSS",
         Color: "#0655dd"
     },
@@ -31,16 +31,16 @@ const ExperienceTimeline = {
         Description: "Desarrollo de una página para el remix contest organizado por Blue Larimar Music y GRGE.",
         Icon: "/Icons/Remix Contest.png",
         Date:"Abril 2024 - Mayo 2024",
-        Technologies: "React | SASS",
+        Technologies: "React | SASS | Firebase",
         Color: "#ef28c1"
     },
 
     Rainde: {
         Title: "Corporativo Rainde",
-        Description: "Revisión de calidad de código y testing el departamento de QA, control de versionamiento de cambios y publicación",
+        Description: "Revisión de calidad de código y pruebas unitarias. Control de versionamiento de cambios y publicación.",
         Date: "Junio 2024 - Octubre 2024",
         Icon: "/Icons/Rainde.png",
-        Technologies: "ASP.NET | GIT | SQL Server",
+        Technologies: "ASP.NET | GIT | SQL Server | Selenium IDE",
         Color: "#f8d300"
     }
 }

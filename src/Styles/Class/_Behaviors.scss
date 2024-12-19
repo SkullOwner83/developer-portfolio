@@ -1,18 +1,11 @@
 //Class to center elements in the container. Default stack mode is column or vectically
-@mixin Centered-Container() {
+@mixin Centered-Container($Direction: column) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-direction: $Direction;
     align-items: center;
     text-align: center;
-
-    &.Flex-Row {
-        flex-direction: row;
-    }
-
-    &.Flex-Column {
-        flex-direction: column;
-    }
 }
 
 .Centered-Container {
@@ -32,10 +25,10 @@
 }
 
 //Container to adjust elments with fixed size
-@mixin Flex-Wrap($Gap: 32px) {
+@mixin Flex-Wrap($Gap: 32px, $Justify: space-evenly) {
     display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: $Justify;
 	align-items: center;
     gap: $Gap;
 }

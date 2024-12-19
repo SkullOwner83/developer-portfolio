@@ -29,7 +29,8 @@ const Projects = {
     SIAWebsite: {
         Name: "Sitio Web de SIA",
         Description: "Propuestad e implementación de una single page aplication para servicios informaticos.",
-        Technologies: "C# | XAML | MySQL",
+        Technologies: "React | SASS",
+        CodeLink: "https://github.com/SkullOwner83/SiaWebsite",
         State: "Pausado",
         Image: "/Gallery/Sia website.png"
     },

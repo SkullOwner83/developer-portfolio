@@ -10,6 +10,10 @@
             width: 128px;
             margin-bottom: 8px;
             @include Fx-Floating();
+
+            @include ScreenMinWidth($MobileResolution) {
+                width: 96px;
+            }
         }
 
         &::after {
