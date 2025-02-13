@@ -1,7 +1,7 @@
 const Projects = {
     RemixContest: {
-        Name: `"Solo tú" - Remix contest`,
-        Description: `Página web donde se anunció el remix contest de la canción "Solo tú" de Blue Larimar Music y GRGE.`,
+        Name: `Solo tú - Remix contest`,
+        Description: `Página donde se anunciaron y publicaron los resultados del remix contest organizado por Blue Larimar y GRGE Music.`,
         Technologies: "React | SASS | Firebase",
         Website: "https://solotu-remixcontest.web.app/",
         CodeLink: "https://github.com/SkullOwner83/remix-contest",
@@ -9,9 +9,18 @@ const Projects = {
         Image: "/Gallery/Solo Tu.png"
     },
 
+    BotBonito: {
+        Name: "BotBonito",
+        Description: "Desarrollo de un bot para automatizar funciones e interacciones del chat durante las transmisiones en vivo de Twitch.",
+        Technologies: "Python | Twitch API",
+        CodeLink: "https://github.com/SkullOwner83/botbonito",
+        State: "Terminado",
+        Image: "/Gallery/Botbonito.png"
+    },
+
     Scriptcraft: {
         Name: "Scriptcraft",
-        Description: "Aplicación de escritorio para facilitar la elaboración de guiones para contenido digital.",
+        Description: "Aplicación de escritorio para agilizar la elaboración de guiones y organización de ideas para la creación de contenido digital.",
         Technologies: "C# | XAML",
         State: "Desarrollando",
         DownloadLink: "",
@@ -28,7 +37,7 @@ const Projects = {
 
     SIAWebsite: {
         Name: "Sitio Web de SIA",
-        Description: "Propuestad e implementación de una single page aplication para servicios informaticos.",
+        Description: "Rediseño de página web de Servicios Informáticos y conversión de una página estatica en una SPA.",
         Technologies: "React | SASS",
         CodeLink: "https://github.com/SkullOwner83/SiaWebsite",
         State: "Pausado",
@@ -44,18 +53,9 @@ const Projects = {
         Image: "/Gallery/Cinemovies.png"
     },
 
-    BotBonito: {
-        Name: "BotBonito",
-        Description: "Bot para automatizar las funciones e interacciones del chat en las transmisiones en vivo en Twitch.",
-        Technologies: "Python",
-        CodeLink: "https://github.com/SkullOwner83/botbonito",
-        State: "Terminado",
-        Image: "/Gallery/Botbonito.png"
-    },
-
     UFOInvader: {
         Name: "UFO Invader",
-        Description: `Videojuego de naves tipo arcade, desarrollado para la gamejam "No Internet" de Opera GX.`,
+        Description: `Desarrollo de un videojuego multijugador para la competencia de GameJam 'No Internet' de Opera GX, con la temática UFO.`,
         Technologies: "Game Maker Studio 2",
         Website: "https://gamejolt.com/games/uffo_invader/639334",
         State: "Terminado",

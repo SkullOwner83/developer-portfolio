@@ -4,7 +4,7 @@ const technologies = {
         Type: "Lenguaje de programación",
         IconPath: "/Logos/C Sharp.png",
         Experience: "4 años",
-        Level: "Avanzado",
+        Level: "Alto",
         Section: "Main"
     },
 
@@ -40,6 +40,15 @@ const technologies = {
         Type: "Lenguaje de programación",
         IconPath: "/Logos/Javascript.png",
         Experience: "2 años",
+        Level: "Medio",
+        Section: "Main"
+    },
+
+    Typescript: {
+        Name: "Typescript",
+        Type: "Lenguaje de programación",
+        IconPath: "/Logos/Typescript.png",
+        Experience: "1 año",
         Level: "Medio",
         Section: "Main"
     },
@@ -107,6 +116,15 @@ const technologies = {
         Section: "Main"
     },
 
+    Php: {
+        Name: "Php",
+        Type: "Lenguaje de programación",
+        IconPath: "/Logos/Php.png",
+        Experience: "1 año",
+        Level: "Bajo",
+        Section: "Learning"
+    },
+
     Python: {
         Name: "Python",
         Type: "Lenguaje de programación",
@@ -120,15 +138,6 @@ const technologies = {
         Name: "C++",
         Type: "Lenguaje de programación",
         IconPath: "/Logos/C Plus Plus.png",
-        Experience: "3 años",
-        Level: "Bajo",
-        Section: "Learning"
-    },
-
-    Typescript: {
-        Name: "Typescript",
-        Type: "Lenguaje de programación",
-        IconPath: "/Logos/Typescript.png",
         Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
