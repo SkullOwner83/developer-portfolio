@@ -25,22 +25,16 @@
 
             .State-Container {
                 position: absolute;
-                display: flex;
-                align-items: center;
+                @include Tag-Container();
                 user-select: none;
                 cursor: default;
-                gap: 8px;
-
-                background-color: rgba(black, 0.7);
+                
                 transform: translateX(-50%);
                 left: 50%;
                 top: 8px;
                 z-index: 10;
-                padding: 0 8px;
-                border-radius: 12px;
-                backdrop-filter: blur(10px);
 
-                div {
+                .State-Dot {
                     width: 12px;
                     height: 12px;
                     background-color: green;
@@ -69,6 +63,26 @@
                     border-bottom: 2px solid $bordersColor;
                     padding-bottom: 4px;;
                     margin-bottom: 4px;
+                }
+
+                .Description {
+                    margin-bottom: 8px;
+                }
+
+                .Tech-Stack {
+                    display: flex;
+                    justify-content: center;
+                    user-select: none;
+                    gap: 8px;
+
+                    .Tech-Container {
+                        @include Tag-Container();
+
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
                 }
             }
 

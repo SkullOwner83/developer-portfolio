@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Modal } from "./Modal";
 import { useState } from "react";
+import TechImages from "../Data/TechnImages";
 
 export const Gallery = ({ Nodes }) => {
     const [currentModalImage, setCurrentModalImage] = useState(null);
@@ -25,7 +26,7 @@ export const Gallery = ({ Nodes }) => {
                 <div key={index} className="Item-Container">
                     <div className="Image-Container">
                         <div className="State-Container">
-                            <div style={GetStateColor(item.State)}/>
+                            <div className="State-Dot" style={GetStateColor(item.State)}/>
                             <p>{item.State}</p>
                         </div>
 
@@ -33,14 +34,24 @@ export const Gallery = ({ Nodes }) => {
                             className="Image-Background" 
                             style={{backgroundImage: `url(${encodeURI(item.Image)}`}}
                             onClick={() => { setCurrentModalImage(item.Image); setToggleModal(true); }}
-                            />
+                        />
                     </div>
 
                     <div className="Info-Container">
                         <div className="Text-Container">
                             <p className="Subtitle">{item.Name}</p>
-                            <p>{item.Description}</p>
-                            <p>Tecnologías: <strong>{item.Technologies}</strong></p>
+                            <p className="Description">{item.Description}</p>
+
+                            <div className="Tech-Stack">
+                            {
+                                item.Technologies.map((tech) => (
+                                    <div key={tech} className="Tech-Container">
+                                        <img src={TechImages[tech]}/>
+                                        <p>{tech}</p>
+                                    </div>
+                                ))
+                            }
+                            </div>
                         </div>
 
                         <div className="Buttons-Container">
