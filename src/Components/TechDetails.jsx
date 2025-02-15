@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
 import { TechContext } from "../Contexts/TechContext";
+import TechImages from "../Data/Images";
 
 export const TechDetails = ({ Technology }) => {
     const { Technologies } = useContext(TechContext);
@@ -10,7 +11,7 @@ export const TechDetails = ({ Technology }) => {
     return (
         <div className="TechDetails-Component">
             <div className="Icon-Container">
-                <img src={technology.IconPath}/>
+                <img src={TechImages[Technology.Name]}/>
             </div>
             
             <div className="Info-Details">

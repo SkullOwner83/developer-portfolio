@@ -25,10 +25,10 @@ export const Gallery = ({ Nodes }) => {
             {Object.values(Nodes).map((item, index) => (
                 <div key={index} className="Item-Container">
                     <div className="Image-Container">
-                        <div className="State-Container">
-                            <div className="State-Dot" style={GetStateColor(item.State)}/>
-                            <p>{item.State}</p>
-                        </div>
+                        <span className="State-Container">
+                            <span className="State-Dot" style={GetStateColor(item.State)}/>
+                            {item.State}
+                        </span>
 
                         <div 
                             className="Image-Background" 
@@ -45,10 +45,10 @@ export const Gallery = ({ Nodes }) => {
                             <div className="Tech-Stack">
                             {
                                 item.Technologies.map((tech) => (
-                                    <div key={tech} className="Tech-Container">
+                                    <span key={tech} className="Tech-Container">
                                         <img src={TechImages[tech]}/>
-                                        <p>{tech}</p>
-                                    </div>
+                                        {tech}
+                                    </span>
                                 ))
                             }
                             </div>

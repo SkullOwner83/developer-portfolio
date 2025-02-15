@@ -11,7 +11,7 @@ const Projects = {
 
     BotBonito: {
         Name: "BotBonito",
-        Description: "Desarrollo de un bot para automatizar funciones e interacciones del chat durante las transmisiones en vivo de Twitch.",
+        Description: "Bot para automatizar funciones e interacciones del chat durante las transmisiones en vivo de Twitch.",
         Technologies: ["Python", "Twitch API"],
         CodeLink: "https://github.com/SkullOwner83/botbonito",
         State: "Terminado",

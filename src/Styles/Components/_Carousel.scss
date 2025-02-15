@@ -22,11 +22,13 @@
             width: 96px;
             height: 96px;
             padding: 12px;
+            transition: 1s;
             @include ScreenMinWidth(800px) { width: 90%; }
 
             img {
                 width: 100%;
                 user-select: none;
+                cursor: pointer;
             }
         }
     }

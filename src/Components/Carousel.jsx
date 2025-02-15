@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { TechContext } from "../Contexts/TechContext";
+import TechImages from "../Data/Images";
 import PropTypes from "prop-types";
 
 export const Carousel = ({ Size, Gap }) => {
@@ -22,7 +23,7 @@ export const Carousel = ({ Size, Gap }) => {
                     item.Section == "Main" ? (
                         <div key="Index" className="Carousel-Item" style={Styles}>
                             <img key={index}
-                                src={item.IconPath}
+                                src={TechImages[item.Name]}
                                 onClick={() => setCurrentTech(item)}
                             />
                         </div>
@@ -37,7 +38,7 @@ export const Carousel = ({ Size, Gap }) => {
                         <div key="Index" className="Carousel-Item" style={Styles}>
                             <img
                                 key={index}
-                                src={item.IconPath}
+                                src={TechImages[item.Name]}
                                 onClick={() => setCurrentTech(item)}
                             />
                         </div>

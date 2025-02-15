@@ -2,7 +2,6 @@ const technologies = {
     CSharp: {
         Name: "C#",
         Type: "Lenguaje de programación",
-        IconPath: "/Logos/C Sharp.png",
         Experience: "4 años",
         Level: "Alto",
         Section: "Main"
@@ -11,7 +10,6 @@ const technologies = {
     XAML: {
         Name: "XAML",
         Type: "Lenguaje de marcado",
-        IconPath: "/Logos/XAML.png",
         Experience: "3 años",
         Level: "Avanzado",
         Section: "Main"
@@ -20,7 +18,6 @@ const technologies = {
     HTML: {
         Name: "HTML",
         Type: "Lenguaje de marcado",
-        IconPath: "/Logos/HTML.png",
         Experience: "6 años",
         Level: "Avanzado",
         Section: "Main"
@@ -29,7 +26,6 @@ const technologies = {
     CSS: {
         Name: "CSS",
         Type: "Lenguaje de estilos",
-        IconPath: "/Logos/CSS.png",
         Experience: "6 años",
         Level: "Avanzado",
         Section: "Main"
@@ -38,7 +34,6 @@ const technologies = {
     Javascript: {
         Name: "Javascript",
         Type: "Lenguaje de programación",
-        IconPath: "/Logos/Javascript.png",
         Experience: "2 años",
         Level: "Medio",
         Section: "Main"
@@ -47,7 +42,6 @@ const technologies = {
     Typescript: {
         Name: "Typescript",
         Type: "Lenguaje de programación",
-        IconPath: "/Logos/Typescript.png",
         Experience: "1 año",
         Level: "Medio",
         Section: "Main"
@@ -56,7 +50,6 @@ const technologies = {
     React: {
         Name: "React",
         Type: "Biblioteca",
-        IconPath: "/Logos/React.png",
         Experience: "1 año",
         Level: "Medio",
         Section: "Main"
@@ -65,7 +58,6 @@ const technologies = {
     Vite: {
         Name: "Vite",
         Type: "Empaquetador",
-        IconPath: "/Logos/Vite.png",
         Experience: "1 año",
         Level: "Alto",
         Section: "Main"
@@ -74,7 +66,6 @@ const technologies = {
     Git: {
         Name: "Git",
         Type: "Sistema de control de versiones",
-        IconPath: "/Logos/Git.png",
         Experience: "3 años",
         Level: "Alto",
         Section: "Main"
@@ -83,16 +74,14 @@ const technologies = {
     MySQL: {
         Name: "MySQL",
         Type: "Sistema gestor de base de datos",
-        IconPath: "/Logos/My SQL.png",
         Experience: "3 años",
         Level: "Medio",
         Section: "Main"
     },
 
     Sass: {
-        Name: "Sass",
+        Name: "SASS",
         Type: "Preprocesador",
-        IconPath: "/Logos/Sass.png",
         Experience: "2 años",
         Level: "Avanzado",
         Section: "Main"
@@ -101,16 +90,14 @@ const technologies = {
     Boostrap: {
         Name: "Boostrap",
         Type: "Framework",
-        IconPath: "/Logos/Boostrap.png",
         Experience: "1 año",
         Level: "Medio",
         Section: "Main"
     },
 
     GameMaker: {
-        Name: "Game Maker",
+        Name: "Game Maker Studio",
         Type: "Entorno de desarrollo integrado",
-        IconPath: "/Logos/Game Maker Studio 2.png",
         Experience: "8 años",
         Level: "Alto",
         Section: "Main"
@@ -119,7 +106,6 @@ const technologies = {
     Php: {
         Name: "Php",
         Type: "Lenguaje de programación",
-        IconPath: "/Logos/Php.png",
         Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
@@ -128,7 +114,6 @@ const technologies = {
     Python: {
         Name: "Python",
         Type: "Lenguaje de programación",
-        IconPath: "/Logos/Python.png",
         Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
@@ -137,7 +122,6 @@ const technologies = {
     CPlusPlus: {
         Name: "C++",
         Type: "Lenguaje de programación",
-        IconPath: "/Logos/C Plus Plus.png",
         Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
@@ -146,7 +130,6 @@ const technologies = {
     Unity: {
         Name: "Unity",
         Type: "Entorno de desarrollo integrado",
-        IconPath: "/Logos/Unity.png",
         Experience: "1 año",
         Level: "Bajo",
         Section: "Learning"
@@ -155,7 +138,6 @@ const technologies = {
     Photoshop: {
         Name: "Photoshop",
         Type: "Diseño gráfico",
-        IconPath: "/Logos/Photoshop.png",
         Experience: "7 años",
         Level: "Alto",
         Section: "Design"
@@ -164,7 +146,6 @@ const technologies = {
     Illustrator: {
         Name: "Illustrator",
         Type: "Diseño vectorial",
-        IconPath: "/Logos/Illustrator.png",
         Experience: "4 años",
         Level: "Medio",
         Section: "Design"
@@ -173,7 +154,6 @@ const technologies = {
     XD: {
         Name: "XD",
         Type: "Prototipado de interfaces",
-        IconPath: "/Logos/XD.png",
         Experience: "2 años",
         Level: "Medio",
         Section: "Design"
@@ -182,7 +162,6 @@ const technologies = {
     Figma: {
         Name: "Figma",
         Type: "Prototipado de interfaces",
-        IconPath: "/Logos/Figma.png",
         Experience: "2 años",
         Level: "Medio",
         Section: "Design"

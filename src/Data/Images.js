@@ -4,13 +4,25 @@ const TechImages = {
     "HTML" : "/Logos/HTML.png",
     "CSS" : "/Logos/CSS.png",
     "Javascript" : "/Logos/Javascript.png",
+    "Typescript" : "/Logos/Typescript.png",
     "React" : "/Logos/React.png",
+    "Vite" : "/Logos/Vite.png",
+    "Git" : "/Logos/Git.png",
     "MySQL" : "/Logos/My SQL.png",
     "SASS" : "/Logos/Sass.png",
-    "Python" : "/Logos/Python.png",
+    "Boostrap" : "/Logos/Boostrap.png",
+    "Game Maker Studio 2" : "/Logos/Game Maker Studio 2.png",
+    "Game Maker Studio" : "/Logos/Game Maker Studio 2.png",
     "Firebase" : "/Logos/Firebase.png",
     "Twitch API" : "/Logos/Twitch API.png",
-    "Game Maker Studio 2" : "/Logos/Game Maker Studio 2.png"
+    "Php" : "/Logos/Php.png",
+    "Python" : "/Logos/Python.png",
+    "C++" : "/Logos/C Plus Plus.png",
+    "Unity" : "/Logos/Unity.png",
+    "Photoshop" : "/Logos/Photoshop.png",
+    "Illustrator" : "/Logos/Illustrator.png",
+    "XD" : "/Logos/XD.png",
+    "Figma" : "/Logos/Figma.png"
 }
 
 export default TechImages;

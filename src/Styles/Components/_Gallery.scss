@@ -4,7 +4,6 @@
     .Item-Container {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         border: 2px solid $bordersColor;
         border-radius: 12px;
         overflow: hidden;
@@ -54,6 +53,8 @@
             height: calc(100% - 200px);
             background: $backgroundGradient;
             padding: 32px;
+            @include Flex-Wrap(0);
+            justify-content: space-between;
 
             .Text-Container {
                 margin-bottom: 32px;
@@ -70,14 +71,12 @@
                 }
 
                 .Tech-Stack {
-                    display: flex;
-                    justify-content: center;
+                    @include Flex-Wrap(8px, center);
                     user-select: none;
-                    gap: 8px;
 
                     .Tech-Container {
                         @include Tag-Container();
-
+                        
                         img {
                             width: 16px;
                             height: 16px;

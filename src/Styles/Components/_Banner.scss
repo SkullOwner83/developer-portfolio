@@ -22,7 +22,7 @@
             gap: 64px;
             
             @include Centered-Container();
-            @include ScreenMinHeight(800px) { gap: 32px }
+            @include ScreenMinHeight(600px) { gap: 32px }
 
             .Info-Container {
                 @include Flex-Wrap(32px, center);

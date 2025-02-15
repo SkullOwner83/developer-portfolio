@@ -32,6 +32,7 @@ main {
         &.TechStack-Section {
             img {
                 width: 80px;
+                cursor: pointer;
                 @include Fx-Expand(1.2);
                 @include ScreenMinWidth($MobileResolution) { width: 64px; }
             }

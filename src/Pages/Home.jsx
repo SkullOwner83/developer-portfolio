@@ -4,6 +4,7 @@ import { TechDetails } from "../Components/TechDetails";
 import { TechContext } from "../Contexts/TechContext";
 import { Timeline } from "../Components/Timeline";
 import { Gallery } from "../Components/Gallery";
+import TechImages from "../Data/Images";
 
 export const Home = () => {
     const { currentTech, setCurrentTech, techstackRef, experienceRef, projectsRef, Technologies, Experience, Projects } = useContext(TechContext);
@@ -51,7 +52,7 @@ export const Home = () => {
                                             item.Section == "Learning" ? (
                                                 <img 
                                                     key={index} 
-                                                    src={item.IconPath}
+                                                    src={TechImages[item.Name]}
                                                     onClick={() => setCurrentTech(item)}
                                                 />
                                             )
@@ -70,7 +71,7 @@ export const Home = () => {
                                             item.Section == "Design" ? (
                                                 <img 
                                                     key={index} 
-                                                    src={item.IconPath}
+                                                    src={TechImages[item.Name]}
                                                     onClick={() => setCurrentTech(item)}
                                                 />
                                             )
