@@ -25,11 +25,12 @@ export const Timeline = ({ Nodes }) => {
                         <div className="Header-Container">
                             <img src={item.Icon}/>
                             <p className="Title">{item.Title}</p>
-                            <p className="Date">{item.Date}</p>
+                            
                         </div>
                         
                         <p>{item.Description}</p>
                         <p>Tecnologías usadadas: <strong>{item.Technologies}</strong></p>
+                        <p className="Date">{item.Date}</p>
                     </div>
                 </div>
             ))}

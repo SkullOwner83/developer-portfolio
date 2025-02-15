@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Modal } from "./Modal";
 import { useState } from "react";
-import TechImages from "../Data/TechnImages";
+import TechImages from "../Data/Images";
 
 export const Gallery = ({ Nodes }) => {
     const [currentModalImage, setCurrentModalImage] = useState(null);

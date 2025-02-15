@@ -52,16 +52,17 @@
 
             .Header-Container {
                 display: grid;
-                grid-template-columns: auto 1fr 1fr;
+                grid-template-columns: auto 1fr;
 
                 img {
                     width: 24px;
                     margin-right: 8px;
                 }
+            }
 
-                .Date {
-                    color: gray;
-                }
+            .Date {
+                color: gray;
+                text-align: left;
             }
         }
     }

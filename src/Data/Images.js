@@ -3,7 +3,7 @@ const TechImages = {
     "XAML" : "/Logos/XAML.png",
     "HTML" : "/Logos/HTML.png",
     "CSS" : "/Logos/CSS.png",
-    "Javascript" : "/Logos/JavaScript.png",
+    "Javascript" : "/Logos/Javascript.png",
     "React" : "/Logos/React.png",
     "MySQL" : "/Logos/My SQL.png",
     "SASS" : "/Logos/Sass.png",

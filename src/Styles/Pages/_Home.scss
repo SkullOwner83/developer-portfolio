@@ -33,16 +33,24 @@ main {
             img {
                 width: 80px;
                 @include Fx-Expand(1.2);
-
-                @include ScreenMinWidth($MobileResolution) {
-                    width: 64px;
-                }
+                @include ScreenMinWidth($MobileResolution) { width: 64px; }
             }
         }
 
-        .Flex-Wrap {
-            justify-content: center;
-            user-select: none;
+        .Another-Technologies {
+            @include Flex-Wrap(); 
+
+            .Subtitle {
+                margin-bottom: 16px;
+            }
+
+            .Flex-Wrap {
+                justify-content: center;
+                user-select: none;
+                gap: 24px;
+
+                @include ScreenMinWidth($MobileResolution) { gap: 16px; }
+            }
         }
     }
 

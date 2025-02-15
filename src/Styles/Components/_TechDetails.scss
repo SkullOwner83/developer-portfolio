@@ -1,19 +1,23 @@
 .TechDetails-Component {
     border: 2px solid $bordersColor;
     border-radius: 12px;
-    @include Grid-Wrap(150px, 0);
+    padding: 32px;
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    
     .Icon-Container {
         @include Centered-Container();
-
+        @include DebugBorders();
+        flex: 0 1 auto;
+        
         img {
-            width: 128px;
+            width: 96px;
             margin-bottom: 8px;
             @include Fx-Floating();
-
-            @include ScreenMinWidth($MobileResolution) {
-                width: 96px;
-            }
+            @include ScreenMinWidth($MobileResolution) { width: 96px; }
         }
 
         &::after {
@@ -21,22 +25,23 @@
             display: block;                    
             width: 100px;
             height: 20px;
-            background-color: rgb(black, 1);
+            background-color: rgb(black, 0.8);
             animation: Shadow 2s ease-in-out infinite;
             border-radius: 100%;
             filter: blur(4px);
     
             @keyframes Shadow {
-                0% { transform: scaleX(1); }
-                50% { transform: scaleX(0.8); }
-                100% { transform: scaleX(1); }
+                0% { transform: scaleX(0.8); }
+                50% { transform: scaleX(0.6); }
+                100% { transform: scaleX(0.8); }
             }
         }
     }
 
     .Info-Details {
-        padding: 32px 32px 32px 0;
-        @include ScreenMinWidth(400px) { padding: 32px;}
+        flex: 1 1 auto;
+        max-width: 300px;
+        @include DebugBorders();
 
         p {
             text-align: left;

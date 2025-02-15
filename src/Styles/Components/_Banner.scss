@@ -6,118 +6,134 @@
     position: relative;
     height: 100vh;
 
-    @include ScreenMinWidth($MobileResolution) {
-        grid-template-columns: 50% 50%;
-    }
+    @include ScreenMinWidth($MobileResolution) { grid-template-columns: 50% 50%; }
 
     .Left-Container {
         grid-column: 1 / span 2;
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        justify-content: center;
-        padding: 10%;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        padding: 32px 10%;
         height: 100%;
-        gap: 64px;
         @include DebugBorders();
+        @include ScreenMinWidth($SmallMobileResolution) { padding: 32px 5%; }
 
-        .Info-Container {
-            @include Flex-Wrap(32px, center);
-            @include DebugBorders();
+        .Main-Container {
+            grid-row: 1;
+            gap: 64px;
+            
+            @include Centered-Container();
+            @include ScreenMinHeight(800px) { gap: 32px }
 
-            .Photo-Container {
-                width: 150px;
-                height: 150px;
-                aspect-ratio: 1 / 1;
-                border-radius: 100%;                
-                border: 3px solid white;
+            .Info-Container {
+                @include Flex-Wrap(32px, center);
+                @include DebugBorders();
 
-                background-image: url("/Profile Photo.jpg");
-                background-size: cover;
-                background-position: center;
+                .Photo-Container {
+                    width: 150px;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 100%;                
+                    border: 3px solid white;
+
+                    background-image: url("/Profile Photo.jpg");
+                    background-size: cover;
+                    background-position: center;
+
+                    transition: width 1s;
+                    @include ScreenMinWidth($SmallMobileResolution) { width: 130px; }
+                    @include ScreenMinHeight(550px) { display: none; }
+                }
+
+                .Biografy-Container {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 32px;
+                    text-align: left;
+                    gap: 16px;
+
+                    @include ScreenMinWidth($SmallMobileResolution) { 
+                        font-size: 24px;
+                        text-align: center;
+                    }
+
+                    transition: font-size 0.5s;
+                    @include DebugBorders(green);
+                    
+                    .Biografy-Name { font-weight: bold; }
+                    .Biografy-Description { color: $primaryColor; }
+                }
+            
+                .Buttons-Container {
+                    display: flex;
+                    gap: 16px;
+                    
+                    .Convencional-Button, .Outlined-Button { 
+                        min-width: 150px; 
+                        text-align: center;
+
+                        @include ScreenMinWidth($SmallMobileResolution) { min-width: 130px; }
+                    }
+                }
             }
 
-            .Biografy-Container {
+            .Navigation-Menu {
                 display: flex;
                 flex-direction: column;
-                font-size: 32px;
-                gap: 16px;
-                @include DebugBorders(green);
+                align-items: center;
+                @include DebugBorders();
 
-                .Biografy-Name { font-weight: bold; }
-                .Biografy-Description { color: $primaryColor; }
-            }
-        
-            .Buttons-Container {
-                display: flex;
-                gap: 16px;
-                
-                .Convencional-Button, .Outlined-Button { 
-                    min-width: 150px; 
+                li {
+                    color: rgb(180, 180, 180);
+                    font-size: 24px;
                     text-align: center;
-                }
-            }
-        }
+                    user-select: none;
+                    cursor: pointer;
+                    min-width: 200px;
 
-        ul {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            @include DebugBorders();
+                    &.Selected {
+                        color: white;
 
-            li {
-                color: rgb(180, 180, 180);
-                font-size: 24px;
-                text-align: center;
-                user-select: none;
-                cursor: pointer;
-                min-width: 200px;
-
-                &.Selected {
-                    color: white;
-
-                    &::before { 
-                        font-family: 'Courier New', Courier, monospace;
-                        display: inline-block;
-                        content: "►";
-                        animation: LeftMove 1s linear infinite;
-                        
-                        @keyframes LeftMove {
-                            0% { transform: translateX(-10px); }
-                            50% { transform: translateX(-15px); }
-                            100% { transform: translate(-10px); }
+                        &::before { 
+                            font-family: 'Courier New', Courier, monospace;
+                            display: inline-block;
+                            content: "►";
+                            animation: LeftMove 1s linear infinite;
+                            
+                            @keyframes LeftMove {
+                                0% { transform: translateX(-10px); }
+                                50% { transform: translateX(-15px); }
+                                100% { transform: translate(-10px); }
+                            }
                         }
-                    }
 
-                    &::after { 
-                        font-family: 'Courier New', Courier, monospace;
-                        display: inline-block;
-                        content: "◄"; 
-                        animation: RightMove 1s linear infinite;
+                        &::after { 
+                            font-family: 'Courier New', Courier, monospace;
+                            display: inline-block;
+                            content: "◄"; 
+                            animation: RightMove 1s linear infinite;
 
-                        @keyframes RightMove {
-                            0% { transform: translateX(10px); }
-                            50% { transform: translateX(15px); }
-                            100% { transform: translate(10px); }
+                            @keyframes RightMove {
+                                0% { transform: translateX(10px); }
+                                50% { transform: translateX(15px); }
+                                100% { transform: translate(10px); }
+                            }
                         }
                     }
                 }
             }
         }
 
-        .Logos-Container {            
-            position: absolute;
-            transform: translateX(-50%);
-            left: 50%;
-            bottom: 32px;
-            cursor: pointer;
+        .Logos-Container {
+            grid-row: 2;
+            @include Centered-Container(row);
+            gap: 16px;
 
             a {
+                user-select: none;
+                cursor: pointer;
+
                 img { 
                     width: 32px;
                 }
-
-                &:not(:last-child) { margin-right: 16px; }
             }
         }
     }

@@ -41,29 +41,32 @@ export const Home = () => {
                     <div className="Grid-Wrap">
                         <TechDetails Technology={currentTech}/>
 
-                        <div className="Flex-Wrap">
+                        <div className="Another-Technologies">
                             <div>
                                 <p className="Subtitle">APRENDIENDO</p>
                                 <div className="Flex-Wrap">
-                                    {/* Print only learning technologies from the list */}
-                                    {Object.values(Technologies).map((item, index) => (
-                                        item.Section == "Learning" ? (
-                                            <img 
-                                                key={index} 
-                                                src={item.IconPath}
-                                                onClick={() => setCurrentTech(item)}
-                                            />
-                                        )
-                                        : null
-                                    ))}
+                                    {
+                                        /* Print only learning technologies from the list */
+                                        Object.values(Technologies).map((item, index) => (
+                                            item.Section == "Learning" ? (
+                                                <img 
+                                                    key={index} 
+                                                    src={item.IconPath}
+                                                    onClick={() => setCurrentTech(item)}
+                                                />
+                                            )
+                                            : null
+                                        ))
+                                    }
                                 </div>
                             </div>
 
                             <div>
                                 <p className="Subtitle">DISEÑO</p>
                                 <div className="Flex-Wrap">
-                                    {/* Print only design technologies from the list */}
-                                    {Object.values(Technologies).map((item, index) => (
+                                    {
+                                        /* Print only design technologies from the list */
+                                        Object.values(Technologies).map((item, index) => (
                                             item.Section == "Design" ? (
                                                 <img 
                                                     key={index} 
@@ -72,7 +75,8 @@ export const Home = () => {
                                                 />
                                             )
                                             : null
-                                        ))}
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>

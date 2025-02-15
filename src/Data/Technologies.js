@@ -82,7 +82,7 @@ const technologies = {
 
     MySQL: {
         Name: "MySQL",
-        Type: "Sistema de gestión de base de datos",
+        Type: "Sistema gestor de base de datos",
         IconPath: "/Logos/My SQL.png",
         Experience: "3 años",
         Level: "Medio",
