@@ -3,61 +3,52 @@ import { Modal } from "./Modal";
 import { useState } from "react";
 import TechImages from "../Data/Images";
 
-export const Gallery = ({ Nodes }) => {
+export const Gallery = ({ Items }) => {
     const [currentModalImage, setCurrentModalImage] = useState(null);
     const [toggleModal, setToggleModal] = useState(false);
 
-    function GetStateColor(State) {
-        switch (State) {
-            case "Terminado":
-              return { backgroundColor: "#17c42e" };
-            case "Desarrollando":
-              return { backgroundColor: "#0687dd" };
-            case "Pausado":
-              return { backgroundColor: "#f8d300" };
-            default:
-              return { backgroundColor: "Gray" };
-        }
+    const StateColor = {
+        "Terminado": "#17c42e",
+        "Desarrollando": "#0687dd",
+        "Pausado": "#f8d300",
     }
 
     return (
         <div className="Gallery-Component">
-            {Object.values(Nodes).map((item, index) => (
+            {Object.values(Items).map((projects, index) => (
                 <div key={index} className="Item-Container">
                     <div className="Image-Container">
                         <span className="State-Container">
-                            <span className="State-Dot" style={GetStateColor(item.State)}/>
-                            {item.State}
+                            <span className="State-Dot" style={{backgroundColor: StateColor[projects.State]}}></span>
+                            {projects.State}
                         </span>
 
                         <div 
                             className="Image-Background" 
-                            style={{backgroundImage: `url(${encodeURI(item.Image)}`}}
-                            onClick={() => { setCurrentModalImage(item.Image); setToggleModal(true); }}
+                            style={{backgroundImage: `url(${encodeURI(projects.Image)})`}}
+                            onClick={() => { setCurrentModalImage(projects.Image); setToggleModal(true); }}
                         />
                     </div>
 
                     <div className="Info-Container">
                         <div className="Text-Container">
-                            <p className="Subtitle">{item.Name}</p>
-                            <p className="Description">{item.Description}</p>
+                            <p className="Subtitle">{projects.Name}</p>
+                            <p className="Description">{projects.Description}</p>
 
                             <div className="Tech-Stack">
-                            {
-                                item.Technologies.map((tech) => (
+                                {projects.Technologies.map((tech) => (
                                     <span key={tech} className="Tag-Container">
-                                        <img src={TechImages[tech]}/>
-                                        {tech}
+                                        <img src={TechImages[tech]} alt={tech}/>
+                                        <p>{tech}</p>
                                     </span>
-                                ))
-                            }
+                                ))}
                             </div>
                         </div>
 
                         <div className="Buttons-Container">
-                            { 'Website' in item ? (<a href={item.Website} target="_blank"><div className="Convencional-Button">Ir a sitio</div></a>) : null }
-                            { 'CodeLink' in item ? (<a href={item.CodeLink} target="_blank"><div className="Outlined-Button">Ver código</div></a>) : null }
-                            { 'DownloadLink' in item ? (<a href={item.DownloadLink} target="_blank"><div className="Convencional-Button">Descargar</div></a>) : null }
+                            { 'Website' in projects ? (<a href={projects.Website} target="_blank"><button className="Convencional-Button">Ir a sitio</button></a>) : null }
+                            { 'CodeLink' in projects ? (<a href={projects.CodeLink} target="_blank"><button className="Outlined-Button">Ver código</button></a>) : null }
+                            { 'DownloadLink' in projects ? (<a href={projects.DownloadLink} target="_blank"><button className="Convencional-Button">Descargar</button></a>) : null }
                         </div>
                     </div>
                 </div>
@@ -71,5 +62,16 @@ export const Gallery = ({ Nodes }) => {
 }
 
 Gallery.propTypes = {
-    Nodes: PropTypes.node
+    Items: PropTypes.objectOf(
+        PropTypes.shape({
+            Name: PropTypes.string.isRequired,
+            Description: PropTypes.string.isRequired,
+            Technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+            Website: PropTypes.string,
+            CodeLink: PropTypes.string,
+            DownloadLink: PropTypes.string,
+            State: PropTypes.string,
+            Image: PropTypes.string.isRequired
+        }).isRequired
+    )
 }

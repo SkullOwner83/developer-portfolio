@@ -92,7 +92,7 @@ export const Home = () => {
 
             <section ref={projectsRef}>
                 <h4>PROYECTOS</h4>
-                <Gallery Nodes={Projects}/>
+                <Gallery Items={Projects}/>
             </section>
         </main>
     )

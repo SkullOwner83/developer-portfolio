@@ -1,5 +1,6 @@
 //Styles for convencional buttons
 @mixin Convencional-Button($Color: $secondaryColor) {
+    width: 100%;
     font-size: 18px;
     color: white;
     background-color: $Color;
@@ -50,8 +51,6 @@
 
 .Bullet-List {
   list-style: disc outside;
-  // text-indent: -1.5em;
-  // padding-left: 1.5em;
 }
 
 //Show the content borders on debug mode
