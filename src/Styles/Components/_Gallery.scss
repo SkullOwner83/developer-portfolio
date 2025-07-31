@@ -73,15 +73,6 @@
                 .Tech-Stack {
                     @include Flex-Wrap(8px, center);
                     user-select: none;
-
-                    .Tech-Container {
-                        @include Tag-Container();
-                        
-                        img {
-                            width: 16px;
-                            height: 16px;
-                        }
-                    }
                 }
             }
 

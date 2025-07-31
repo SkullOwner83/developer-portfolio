@@ -31,7 +31,7 @@ export const Home = () => {
         <main>
             <section>
                 <h1>SOBRE MÍ</h1>
-                <p>Soy un desarrollador apasionado por la tecnología y las herramientas digitales, enfocado en el desarrollo de aplicaciones y videojuegos. Disfruto creando aplicaciones responsivas, así como diseñando estilos y controles personalizados. Además, estoy en una constante búsqueda de nuevo conocimiento y desarrollo profesional.</p>
+                <p>Soy un desarrollador con experiencia en la creación de herramientas enfocadas en la experiencia de usuario y en el desarrollo de videojuegos indies. Disfruto construir aplicaciones responsivas, así como diseñando estilos y controles personalizados. Estoy en constante crecimiento profesional y aprendizaje, participando activamente en proyectos personales e independientes.</p>
             </section>
 
             <div className="Solid-Background" ref={techstackRef}>

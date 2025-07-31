@@ -45,7 +45,7 @@ export const Gallery = ({ Nodes }) => {
                             <div className="Tech-Stack">
                             {
                                 item.Technologies.map((tech) => (
-                                    <span key={tech} className="Tech-Container">
+                                    <span key={tech} className="Tag-Container">
                                         <img src={TechImages[tech]}/>
                                         {tech}
                                     </span>

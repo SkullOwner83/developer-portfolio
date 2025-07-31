@@ -37,10 +37,21 @@
   border-radius: 12px;
   background-color: rgba(black, 0.7);
   backdrop-filter: blur(10px);
+
+  img {
+      width: 16px;
+      height: 16px;
+  }
 }
 
 .Tag-Container {
   @include Tag-Container();
+}
+
+.Bullet-List {
+  list-style: disc outside;
+  // text-indent: -1.5em;
+  // padding-left: 1.5em;
 }
 
 //Show the content borders on debug mode

@@ -3,13 +3,13 @@ import PropTypes from "prop-types"
 export const Timeline = ({ Nodes }) => {
     return (
         <div className="Timeline-Componet">
-            {Object.values(Nodes).map((item, index, array) => (
+            {Object.values(Nodes).map((work, index, array) => (
                 <div key={index} className="Timeline-Node">
                     <span className="Timeline-Line">
                         <span className="Node-Circle">
                             <span className="Circle-Node" style={{ 
-                                '--color': item.Color,
-                                backgroundColor: item.Color,
+                                '--color': work.Color,
+                                backgroundColor: work.Color,
                                 animation: `Flicker ${array.length}s infinite`,
                                 animationDelay: `${1 * index}s`
                             }}/>
@@ -22,14 +22,19 @@ export const Timeline = ({ Nodes }) => {
 
                     <div className="Info-Container">
                         <div className="Header-Container">
-                            <img src={item.Icon}/>
-                            <p className="Title">{item.Title}</p>
-                            
+                            <img src={work.Icon}/>
+                            <p className="Title">{work.Title}</p>
                         </div>
                         
-                        <p>{item.Description}</p>
-                        <p>Tecnologías usadadas: <strong>{item.Technologies}</strong></p>
-                        <p className="Date">{item.Date}</p>
+                        <div className="Body-Container">
+                            <ul>
+                                {work.Description.map((item) => (
+                                    <li key={item} className="Bullet-List">{item}</li>
+                                ))}
+                            </ul>
+                            <p>Tecnologías utilizadas: {work.Technologies.join(" | ")}</p>
+                            <p className="Date">{work.Date}</p>
+                        </div>
                     </div>
                 </div>
             ))}

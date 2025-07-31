@@ -6,7 +6,7 @@ export const Banner = () => {
     const [activeOption, setActiveIndex] = useState(0);
     const { techstackRef, experienceRef, projectsRef } = useContext(TechContext)
 
-    const sndMenuRef = useRef(new Audio("../../public/Sounds/Menu.wav")).current;
+    const sndMenuRef = useRef(new Audio("../../Sounds/Menu.wav")).current;
     sndMenuRef.volume = 1;
 
     const menuOptions = {
@@ -49,7 +49,7 @@ export const Banner = () => {
                             </div>
                     
                             <div className="Buttons-Container">
-                                <a href="https://drive.usercontent.google.com/download?id=1kGy_7Lya8GEbf0pgRxrChZ9jh-Rx96oO&export=download&authuser=0&confirm=t&uuid=ac28a554-b37b-4da5-aa1d-ae97d84a6c7e&at=AN_67v0RF1gh4zHORFy9Sl0WEicV:1729331899253">
+                                <a href="https://drive.usercontent.google.com/download?id=1m_7TWTDZ0_fIX0kEpzgQdK_s6WAauy3o&export=download&authuser=1&confirm=t&uuid=fc85c444-b067-453f-b30c-97c23e5c4de7&at=AN8xHorWS7mopRfuUJISjRK8_rj6:1753917358298">
                                     <div className="Convencional-Button">Curriculum</div>
                                 </a>
 

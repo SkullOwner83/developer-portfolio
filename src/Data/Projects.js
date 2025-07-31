@@ -1,7 +1,7 @@
 const Projects = {
     RemixContest: {
-        Name: `Solo tú - Remix contest`,
-        Description: `Página donde se anunciaron y publicaron los resultados del remix contest organizado por Blue Larimar y GRGE Music.`,
+        Name: "Solo tú - Remix contest",
+        Description: "Sitio web donde se anunció y distribuyó el material oficial para el remix contest organizado por Blue Larimar y GRGE Music.",
         Technologies: ["React", "SASS", "Firebase"],
         Website: "https://solotu-remixcontest.web.app/",
         CodeLink: "https://github.com/SkullOwner83/remix-contest",
@@ -11,8 +11,8 @@ const Projects = {
 
     BotBonito: {
         Name: "BotBonito",
-        Description: "Bot para automatizar funciones e interacciones del chat durante las transmisiones en vivo de Twitch.",
-        Technologies: ["Python", "Twitch API"],
+        Description: "Bot para automatizar la moderación e interacciones en el chat de transmisiones en vivo de Twitch, con integración de comandos de voz.",
+        Technologies: ["Python", "Flet"],
         CodeLink: "https://github.com/SkullOwner83/botbonito",
         State: "Terminado",
         Image: "/Gallery/Botbonito.png"
@@ -20,7 +20,7 @@ const Projects = {
 
     Scriptcraft: {
         Name: "Scriptcraft",
-        Description: "Aplicación de escritorio para agilizar la elaboración de guiones y organización de ideas para la creación de contenido digital.",
+        Description: "Aplicación para la escritura estructurada y la organización de ideas, orientada a la creación de proyectos creativos y narrativos.",
         Technologies: ["C#", "XAML"],
         State: "Desarrollando",
         DownloadLink: "",
@@ -28,8 +28,8 @@ const Projects = {
     },
 
     PointSale: {
-        Name: "Punto de venta",
-        Description: "Sistema punto de venta de escritorio para la gestión de los recursos de un negocio.",
+        Name: "Sistema comercial",
+        Description: "Sistema para la administración de recursos y operaciones comerciales enfocado al sector tecnológico.",
         Technologies: ["C#", "XAML", "MySQL"],
         State: "Pausado",
         Image: "/Gallery/Punto de venta.png"
@@ -37,7 +37,7 @@ const Projects = {
 
     SIAWebsite: {
         Name: "Sitio Web de SIA",
-        Description: "Rediseño de página web de Servicios Informáticos y conversión de una página estatica en una SPA.",
+        Description: "Rediseño de página web de Servicios Informáticos, implementando una interfaz dinámica e interactiva con tecnologías modernas.",
         Technologies: ["React", "SASS"],
         CodeLink: "https://github.com/SkullOwner83/SiaWebsite",
         State: "Pausado",

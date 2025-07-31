@@ -11,7 +11,7 @@ export const TechDetails = ({ Technology }) => {
     return (
         <div className="TechDetails-Component">
             <div className="Icon-Container">
-                <img src={TechImages[Technology.Name]}/>
+                <img src={TechImages[technology.Name]}/>
             </div>
             
             <div className="Info-Details">
