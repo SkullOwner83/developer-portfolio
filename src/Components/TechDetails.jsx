@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useContext } from "react";
 import { TechContext } from "../Contexts/TechContext";
 import TechImages from "../Data/Images";
+import { useEffect } from "react";
 
 export const TechDetails = ({ Technology }) => {
     const { Technologies } = useContext(TechContext);
