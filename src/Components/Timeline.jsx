@@ -2,15 +2,15 @@ import PropTypes from "prop-types"
 
 export const Timeline = ({ Nodes }) => {
     return (
-        <div className="Timeline-Componet">
-            {Object.values(Nodes).map((work, index, array) => (
+        <div className="Timeline-Component"> 
+        {Object.values(Nodes).map((work, index) => (
                 <div key={index} className="Timeline-Node">
                     <span className="Timeline-Line">
                         <span className="Node-Circle">
                             <span className="Circle-Node" style={{ 
                                 '--color': work.Color,
                                 backgroundColor: work.Color,
-                                animation: `Flicker ${array.length}s infinite`,
+                                animation: `Flicker ${Object.values(Nodes).length}s infinite`,
                                 animationDelay: `${1 * index}s`
                             }}/>
                         </span>
@@ -27,14 +27,13 @@ export const Timeline = ({ Nodes }) => {
                         </div>
                         
                         <div className="Body-Container">
-                            <p className="Date">{work.Date}</p>
                             <ul>
-                                {work.Description.map((item) => (
-                                    <li key={item} className="Bullet-List">{item}</li>
+                                {work.Description.map((item, index) => (
+                                    <li key={index} className="Bullet-List">{item}</li>
                                 ))}
                             </ul>
                             <p>Tecnologías utilizadas: {work.Technologies.join(" | ")}</p>
-                            
+                            <p className="Date">{work.Date}</p>
                         </div>
                     </div>
                 </div>
@@ -45,5 +44,14 @@ export const Timeline = ({ Nodes }) => {
 
 //Component props validation
 Timeline.propTypes = {
-    Nodes: PropTypes.node.isRequired
+    Nodes: PropTypes.objectOf(
+        PropTypes.shape({
+            Title: PropTypes.string.isRequired,
+            Description: PropTypes.arrayOf(PropTypes.string).isRequired,
+            Date: PropTypes.string.isRequired,
+            Icon: PropTypes.string,
+            Technologies: PropTypes.arrayOf(PropTypes.string),
+            Color: PropTypes.string
+        })
+    ).isRequired
 }

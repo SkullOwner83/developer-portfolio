@@ -1,43 +1,38 @@
 import PropTypes from "prop-types";
 import { Modal } from "./Modal";
 import { useState } from "react";
+import { StateColor } from "../Utilities/Enums";
 import TechImages from "../Data/Images";
 
 export const Gallery = ({ Items }) => {
     const [currentModalImage, setCurrentModalImage] = useState(null);
     const [toggleModal, setToggleModal] = useState(false);
 
-    const StateColor = {
-        "Terminado": "#17c42e",
-        "Desarrollando": "#0687dd",
-        "Pausado": "#f8d300",
-    }
-
     return (
         <div className="Gallery-Component">
-            {Object.values(Items).map((projects, index) => (
+            {Object.values(Items).map((project, index) => (
                 <div key={index} className="Item-Container">
                     <div className="Image-Container">
                         <span className="State-Container">
-                            <span className="State-Dot" style={{backgroundColor: StateColor[projects.State]}}></span>
-                            {projects.State}
+                            <span className="State-Dot" style={{backgroundColor: StateColor[project.State]}}></span>
+                            {project.State}
                         </span>
 
                         <div 
                             className="Image-Background" 
-                            style={{backgroundImage: `url(${encodeURI(projects.Image)})`}}
-                            onClick={() => { setCurrentModalImage(projects.Image); setToggleModal(true); }}
+                            style={{backgroundImage: `url(${encodeURI(project.Image)})`}}
+                            onClick={() => { setCurrentModalImage(project.Image); setToggleModal(true); }}
                         />
                     </div>
 
                     <div className="Info-Container">
                         <div className="Text-Container">
-                            <p className="Subtitle">{projects.Name}</p>
-                            <p className="Description">{projects.Description}</p>
+                            <p className="Subtitle">{project.Name}</p>
+                            <p className="Description">{project.Description}</p>
 
                             <div className="Tech-Stack">
-                                {projects.Technologies.map((tech) => (
-                                    <span key={tech} className="Tag-Container">
+                                {project.Technologies.map((tech, index) => (
+                                    <span key={index} className="Tag-Container">
                                         <img src={TechImages[tech]} alt={tech}/>
                                         <p>{tech}</p>
                                     </span>
@@ -46,9 +41,23 @@ export const Gallery = ({ Items }) => {
                         </div>
 
                         <div className="Buttons-Container">
-                            { 'Website' in projects ? (<a href={projects.Website} target="_blank"><button className="Convencional-Button">Ir a sitio</button></a>) : null }
-                            { 'CodeLink' in projects ? (<a href={projects.CodeLink} target="_blank"><button className="Outlined-Button">Ver código</button></a>) : null }
-                            { 'DownloadLink' in projects ? (<a href={projects.DownloadLink} target="_blank"><button className="Convencional-Button">Descargar</button></a>) : null }
+                            {project.Website && (
+                                <a href={project.Website} target="_blank" rel="noopener noreferrer">
+                                    <div className="Convencional-Button">Ir a sitio</div>
+                                </a>
+                            )}
+
+                            {project.CodeLink && (
+                                <a href={project.CodeLink} target="_blank" rel="noopener noreferrer">
+                                    <div className="Outlined-Button">Ver código</div>
+                                </a>
+                            )}
+
+                            {project.DownloadLink && (
+                                <a href={project.DownloadLink} target="_blank" rel="noopener noreferrer">
+                                    <div className="Convencional-Button">Descargar</div>
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>

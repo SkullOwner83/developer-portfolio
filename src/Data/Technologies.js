@@ -1,3 +1,5 @@
+import { Level } from "../Utilities/Enums";
+
 const technologies = {
     CSharp: {
         Name: "C#",
@@ -12,7 +14,7 @@ const technologies = {
         Name: "XAML",
         Type: "Lenguaje de marcado",
         Experience: "3 años",
-        Level: "Avanzado",
+        Level: Level.ADVANCED,
         Frequency: "Constante",
         Section: "Main"
     },
@@ -21,7 +23,7 @@ const technologies = {
         Name: "HTML",
         Type: "Lenguaje de marcado",
         Experience: "6 años",
-        Level: "Avanzado",
+        Level: Level.ADVANCED,
         Frequency: "Constante",
         Section: "Main"
     },
@@ -30,7 +32,7 @@ const technologies = {
         Name: "CSS",
         Type: "Lenguaje de estilos",
         Experience: "6 años",
-        Level: "Avanzado",
+        Level: Level.ADVANCED,
         Frequency: "Constante",
         Section: "Main"
     },
@@ -93,7 +95,7 @@ const technologies = {
         Name: "SASS",
         Type: "Preprocesador",
         Experience: "2 años",
-        Level: "Avanzado",
+        Level: Level.ADVANCED,
         Frequency: "Constante",
         Section: "Main"
     },
