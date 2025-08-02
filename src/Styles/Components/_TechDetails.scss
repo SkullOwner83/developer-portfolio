@@ -1,18 +1,60 @@
 .TechDetails-Component {
-    border: 2px solid $bordersColor;
-    border-radius: 12px;
-    padding: 32px;
-
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
+
+    border: 2px solid $bordersColor;
+    border-radius: 12px;
+    padding: 32px;
+
+    .Buttons-Overlay  {
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        margin-top: -32px;
+
+        & button {
+            width: 32px;
+            height: 96px;
+            padding: 8px;
+            background-color: transparent;
+            pointer-events: auto;
+            border: 0;
+            
+            img {
+                width: 100%;
+                opacity: 0.5;
+                transition: 0.1s;
+                user-select: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                img {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+            }
+
+            &:active {
+                img { transform: scale(1) }
+            }
+        }
+    }
 
     .Icon-Container {
         @include Centered-Container();
         @include DebugBorders();
         flex: 1 1 100px;
         max-width: 100%;
+        user-select: none;
+        
         
         img {
             width: 128px;

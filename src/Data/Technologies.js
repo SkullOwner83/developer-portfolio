@@ -4,6 +4,7 @@ const technologies = {
         Type: "Lenguaje de programación",
         Experience: "4 años",
         Level: "Alto",
+        Frequency: "Constante",
         Section: "Main"
     },
 
@@ -12,6 +13,7 @@ const technologies = {
         Type: "Lenguaje de marcado",
         Experience: "3 años",
         Level: "Avanzado",
+        Frequency: "Constante",
         Section: "Main"
     },
 
@@ -20,6 +22,7 @@ const technologies = {
         Type: "Lenguaje de marcado",
         Experience: "6 años",
         Level: "Avanzado",
+        Frequency: "Constante",
         Section: "Main"
     },
 
@@ -28,6 +31,7 @@ const technologies = {
         Type: "Lenguaje de estilos",
         Experience: "6 años",
         Level: "Avanzado",
+        Frequency: "Constante",
         Section: "Main"
     },
 
@@ -35,6 +39,7 @@ const technologies = {
         Name: "Javascript",
         Type: "Lenguaje de programación",
         Experience: "2 años",
+        Frequency: "Recurrente",
         Level: "Medio",
         Section: "Main"
     },
@@ -43,6 +48,7 @@ const technologies = {
         Name: "Typescript",
         Type: "Lenguaje de programación",
         Experience: "1 año",
+        Frequency: "Recurrente",
         Level: "Medio",
         Section: "Main"
     },
@@ -51,6 +57,7 @@ const technologies = {
         Name: "React",
         Type: "Biblioteca",
         Experience: "1 año",
+        Frequency: "Recurrente",
         Level: "Medio",
         Section: "Main"
     },
@@ -59,6 +66,7 @@ const technologies = {
         Name: "Vite",
         Type: "Empaquetador",
         Experience: "1 año",
+        Frequency: "Recurrente",
         Level: "Alto",
         Section: "Main"
     },
@@ -67,6 +75,7 @@ const technologies = {
         Name: "Git",
         Type: "Sistema de control de versiones",
         Experience: "3 años",
+        Frequency: "Constante",
         Level: "Alto",
         Section: "Main"
     },
@@ -75,6 +84,7 @@ const technologies = {
         Name: "MySQL",
         Type: "Sistema gestor de base de datos",
         Experience: "3 años",
+        Frequency: "Recurrente",
         Level: "Medio",
         Section: "Main"
     },
@@ -84,6 +94,7 @@ const technologies = {
         Type: "Preprocesador",
         Experience: "2 años",
         Level: "Avanzado",
+        Frequency: "Constante",
         Section: "Main"
     },
 
@@ -91,6 +102,7 @@ const technologies = {
         Name: "Boostrap",
         Type: "Framework",
         Experience: "1 año",
+        Frequency: "Ocasional",
         Level: "Medio",
         Section: "Main"
     },
@@ -99,6 +111,7 @@ const technologies = {
         Name: "Game Maker Studio",
         Type: "Entorno de desarrollo integrado",
         Experience: "8 años",
+        Frequency: "Ocasional",
         Level: "Alto",
         Section: "Main"
     },
@@ -107,6 +120,7 @@ const technologies = {
         Name: "Php",
         Type: "Lenguaje de programación",
         Experience: "1 año",
+        Frequency: "Ocasional",
         Level: "Bajo",
         Section: "Learning"
     },
@@ -115,6 +129,7 @@ const technologies = {
         Name: "Python",
         Type: "Lenguaje de programación",
         Experience: "1 año",
+        Frequency: "Ocasional",
         Level: "Bajo",
         Section: "Learning"
     },
@@ -123,6 +138,7 @@ const technologies = {
         Name: "C++",
         Type: "Lenguaje de programación",
         Experience: "1 año",
+        Frequency: "Ocasional",
         Level: "Bajo",
         Section: "Learning"
     },
@@ -131,6 +147,7 @@ const technologies = {
         Name: "Unity",
         Type: "Entorno de desarrollo integrado",
         Experience: "1 año",
+        Frequency: "Ocasional",
         Level: "Bajo",
         Section: "Learning"
     },
@@ -139,6 +156,7 @@ const technologies = {
         Name: "Photoshop",
         Type: "Diseño gráfico",
         Experience: "7 años",
+        Frequency: "Constante",
         Level: "Alto",
         Section: "Design"
     },
@@ -147,14 +165,16 @@ const technologies = {
         Name: "Illustrator",
         Type: "Diseño vectorial",
         Experience: "4 años",
+        Frequency: "Recurrente",
         Level: "Medio",
         Section: "Design"
     },
 
     XD: {
-        Name: "XD",
+        Name: "Adobe XD",
         Type: "Prototipado de interfaces",
         Experience: "2 años",
+        Frequency: "Ocasional",
         Level: "Medio",
         Section: "Design"
     },
@@ -163,6 +183,7 @@ const technologies = {
         Name: "Figma",
         Type: "Prototipado de interfaces",
         Experience: "2 años",
+        Frequency: "Ocasional",
         Level: "Medio",
         Section: "Design"
     }

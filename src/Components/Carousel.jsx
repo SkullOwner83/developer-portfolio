@@ -25,6 +25,7 @@ export const Carousel = ({ Size, Gap }) => {
                             <img key={index}
                                 src={TechImages[item.Name]}
                                 onClick={() => setCurrentTech(item)}
+                                className="Icon-Item"
                             />
                         </div>
                     )
@@ -40,6 +41,7 @@ export const Carousel = ({ Size, Gap }) => {
                                 key={index}
                                 src={TechImages[item.Name]}
                                 onClick={() => setCurrentTech(item)}
+                                className="Icon-Item"
                             />
                         </div>
                     )

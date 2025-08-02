@@ -22,7 +22,7 @@ const TechImages = {
     "Unity": "/Logos/Unity.png",
     "Photoshop": "/Logos/Photoshop.png",
     "Illustrator": "/Logos/Illustrator.png",
-    "XD": "/Logos/XD.png",
+    "Adobe XD": "/Logos/XD.png",
     "Figma": "/Logos/Figma.png"
 }
 

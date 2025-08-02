@@ -30,7 +30,7 @@ main {
         }
 
         &.TechStack-Section {
-            img {
+            .Icon-Item {
                 width: 80px;
                 cursor: pointer;
                 @include Fx-Expand(1.2);

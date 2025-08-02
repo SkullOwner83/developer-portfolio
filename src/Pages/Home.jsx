@@ -9,6 +9,7 @@ import TechImages from "../Data/Images";
 export const Home = () => {
     const { currentTech, setCurrentTech, techstackRef, experienceRef, projectsRef, Technologies, Experience, Projects } = useContext(TechContext);
     const [isMobile, setIsMobile] = useState(false);
+    const technologiesArray = Object.values(Technologies);
 
     useEffect(() => {
         const handleResize = () => {
@@ -40,7 +41,19 @@ export const Home = () => {
                     <Carousel Size={!isMobile ? 80 : 64} Gap={!isMobile ? 24 : 16}/>
 
                     <div className="Grid-Wrap">
-                        <TechDetails Technology={currentTech}/>
+                        <TechDetails 
+                            Technology={currentTech}
+                            on_previous={() => {
+                                const index = technologiesArray.indexOf(currentTech);
+                                const newIndex = (index - 1 + technologiesArray.length) % technologiesArray.length;
+                                setCurrentTech(technologiesArray[newIndex]);
+                            }}
+                            on_next={() => {
+                                const index = technologiesArray.indexOf(currentTech);
+                                const newIndex = (index + 1) % technologiesArray.length;
+                                setCurrentTech(technologiesArray[newIndex]);
+                            }}
+                        />
 
                         <div className="Another-Technologies">
                             <div>
@@ -54,6 +67,7 @@ export const Home = () => {
                                                     key={index} 
                                                     src={TechImages[item.Name]}
                                                     onClick={() => setCurrentTech(item)}
+                                                    className="Icon-Item"
                                                 />
                                             )
                                             : null
@@ -73,6 +87,7 @@ export const Home = () => {
                                                     key={index} 
                                                     src={TechImages[item.Name]}
                                                     onClick={() => setCurrentTech(item)}
+                                                    className="Icon-Item"
                                                 />
                                             )
                                             : null

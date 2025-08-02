@@ -27,13 +27,14 @@ export const Timeline = ({ Nodes }) => {
                         </div>
                         
                         <div className="Body-Container">
+                            <p className="Date">{work.Date}</p>
                             <ul>
                                 {work.Description.map((item) => (
                                     <li key={item} className="Bullet-List">{item}</li>
                                 ))}
                             </ul>
                             <p>Tecnologías utilizadas: {work.Technologies.join(" | ")}</p>
-                            <p className="Date">{work.Date}</p>
+                            
                         </div>
                     </div>
                 </div>
