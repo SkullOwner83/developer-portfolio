@@ -6,11 +6,7 @@ export const Modal = ({ children, className, isVisible, onToggleVisibility }) =>
 
     //Block the scroll of the page if the modal is visible
     useEffect(() => {
-        if (isActive) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
+        document.body.style.overflow = isActive ? 'hidden' : 'auto';
 
         return () => {
             document.body.style.overflow = 'auto';

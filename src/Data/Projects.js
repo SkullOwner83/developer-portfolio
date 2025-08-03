@@ -1,4 +1,4 @@
-import State from "../Utilities/Enums";
+import { State } from "../Utilities/Enums";
 
 const Projects = {
     RemixContest: {

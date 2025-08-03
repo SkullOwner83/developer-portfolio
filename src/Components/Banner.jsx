@@ -1,6 +1,5 @@
 import { useState, useContext, useRef } from "react";
 import { TechContext } from "../Contexts/TechContext";
-import { PlaySound } from "../Functions";
 
 export const Banner = () => {
     const [activeOption, setActiveIndex] = useState(0);
@@ -17,17 +16,17 @@ export const Banner = () => {
 
         Technologies: {
             Name: "Tecnologías",
-            Function: () => { techstackRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); }
+            Function: () => techstackRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
         },
 
         Experience: {
             Name: "Experiencia",
-            Function: () => { experienceRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); }
+            Function: () => experienceRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
         },
 
         Projects: {
             Name: "Proyectos",
-            Function: () => { projectsRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); }
+            Function: () => projectsRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
         },
 
         Options: {
@@ -69,7 +68,7 @@ export const Banner = () => {
                                     setActiveIndex(index);
                     
                                     if (activeOption != index) {
-                                        PlaySound(sndMenuRef);
+                                        sndMenuRef.play();
                                     }
                                 }}
                             >

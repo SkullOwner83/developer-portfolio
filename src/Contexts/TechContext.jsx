@@ -9,7 +9,7 @@ export const TechContext = createContext();
 
 //Create a component to provide the context to their childrens
 export const TechProvider = ({ children }) => {
-    const [currentTech, setCurrentTech] = useState();
+    const [currentTech, setCurrentTech] = useState(Object.values(Technologies)[0]);
     const techstackRef = useRef(null);
     const experienceRef = useRef(null);
     const projectsRef = useRef(null);

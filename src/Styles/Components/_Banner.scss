@@ -131,10 +131,10 @@
             a {
                 user-select: none;
                 cursor: pointer;
+                transition: 0.2s;
 
-                img { 
-                    width: 32px;
-                }
+                img { width: 32px; }
+                &:hover { transform: translate(0, -8px); }
             }
         }
     }

@@ -20,8 +20,8 @@ export const Home = () => {
             }
         }
 
-        window.addEventListener('resize', handleResize);
         handleResize();
+        window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -59,40 +59,34 @@ export const Home = () => {
                             <div>
                                 <p className="Subtitle">APRENDIENDO</p>
                                 <div className="Flex-Wrap">
-                                    {
-                                        /* Print only learning technologies from the list */
-                                        Object.values(Technologies).map((item, index) => (
-                                            item.Section == "Learning" ? (
-                                                <img 
-                                                    key={index} 
-                                                    src={TechImages[item.Name]}
-                                                    onClick={() => setCurrentTech(item)}
-                                                    className="Icon-Item"
-                                                />
-                                            )
-                                            : null
-                                        ))
-                                    }
+                                    {/* Print only learning technologies from the list */
+                                    Object.values(Technologies).map((item, index) => (
+                                        item.Section == "Learning" && (
+                                            <img 
+                                                key={index} 
+                                                src={TechImages[item.Name]}
+                                                onClick={() => setCurrentTech(item)}
+                                                className="Icon-Item"
+                                            />
+                                        )
+                                    ))}
                                 </div>
                             </div>
 
                             <div>
                                 <p className="Subtitle">DISEÑO</p>
                                 <div className="Flex-Wrap">
-                                    {
-                                        /* Print only design technologies from the list */
-                                        Object.values(Technologies).map((item, index) => (
-                                            item.Section == "Design" ? (
-                                                <img 
-                                                    key={index} 
-                                                    src={TechImages[item.Name]}
-                                                    onClick={() => setCurrentTech(item)}
-                                                    className="Icon-Item"
-                                                />
-                                            )
-                                            : null
-                                        ))
-                                    }
+                                    {/* Print only design technologies from the list */
+                                    Object.values(Technologies).map((item, index) => (
+                                        item.Section == "Design" && (
+                                            <img 
+                                                key={index} 
+                                                src={TechImages[item.Name]}
+                                                onClick={() => setCurrentTech(item)}
+                                                className="Icon-Item"
+                                            />
+                                        )
+                                    ))}
                                 </div>
                             </div>
                         </div>

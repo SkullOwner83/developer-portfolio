@@ -60,7 +60,6 @@ TechDetails.propTypes = {
     Technology: PropTypes.shape({
         Name: PropTypes.string.isRequired,
         Type: PropTypes.string.isRequired,
-        IconPath: PropTypes.string.isRequired,
         Experience: PropTypes.string.isRequired,
         Level: PropTypes.string.isRequired,
         Section: PropTypes.string.isRequired
