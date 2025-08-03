@@ -4,7 +4,7 @@
     background-image: $backgroundGradient;
     align-items: center;
     position: relative;
-    height: 100vh;
+    height: 100dvh;
 
     @include ScreenMinWidth($MobileResolution) { grid-template-columns: 50% 50%; }
 
