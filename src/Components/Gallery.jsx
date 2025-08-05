@@ -7,7 +7,7 @@ import TechImages from "../Data/Images";
 export const Gallery = ({ Items }) => {
     const [currentModalImage, setCurrentModalImage] = useState(null);
     const [toggleModal, setToggleModal] = useState(false);
-    const sndOpenRef = useRef(new Audio("/Sounds/Open.wav")).current;
+    const sndOpenRef = useRef(new Audio("/Sounds/Open.wav"));
 
     return (
         <div className="Gallery-Component">
@@ -23,7 +23,7 @@ export const Gallery = ({ Items }) => {
                             className="Image-Background" 
                             style={{backgroundImage: `url(${encodeURI(project.Image)})`}}
                             onClick={() => { 
-                                sndOpenRef.play();
+                                sndOpenRef.current.play();
                                 setCurrentModalImage(project.Image); 
                                 setToggleModal(true); 
                             }}

@@ -11,7 +11,7 @@ export const TechDetails = ({ Technology, on_previous, on_next }) => {
 
     const mainContainerRef = useRef(null);
     const buttonsOverlayRef = useRef(null);
-    const SndSelectRef = useRef(new Audio("/Sounds/Select.wav")).current;
+    const SndSelectRef = useRef(new Audio("/Sounds/Select.wav"));
 
     // Maintain the navigation buttons at the same heigh as the icon container to preserve the design when the control wraps
     useEffect(() => {

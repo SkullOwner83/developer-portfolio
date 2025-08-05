@@ -10,10 +10,10 @@ export const Home = () => {
     const { currentTech, setCurrentTech, techstackRef, experienceRef, projectsRef, Technologies, Experience, Projects } = useContext(TechContext);
     const [isMobile, setIsMobile] = useState(false);
     const technologiesArray = Object.values(Technologies);
-    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav")).current;
+    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav"));
 
     useEffect(() => {
-        const handleResize = () => {
+        function handleResize() {
             if (window.innerWidth < 800) {
                 setIsMobile(true);
             } else {
@@ -66,8 +66,11 @@ export const Home = () => {
                                             <img 
                                                 key={index} 
                                                 src={TechImages[item.Name]}
-                                                onClick={() => { sndEnterRef.play(); setCurrentTech(item) }}
                                                 className="Icon-Item"
+                                                onClick={() => {
+                                                    sndEnterRef.current.play(); 
+                                                    setCurrentTech(item)
+                                                }}
                                             />
                                         )
                                     ))}
@@ -83,8 +86,11 @@ export const Home = () => {
                                             <img 
                                                 key={index} 
                                                 src={TechImages[item.Name]}
-                                                onClick={() => { sndEnterRef.play(); setCurrentTech(item) }}
                                                 className="Icon-Item"
+                                                onClick={() => { 
+                                                    sndEnterRef.play(); 
+                                                    setCurrentTech(item)
+                                                }}
                                             />
                                         )
                                     ))}

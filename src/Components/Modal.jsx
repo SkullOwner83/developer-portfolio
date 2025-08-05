@@ -30,7 +30,7 @@ export const Modal = ({ children, className, isVisible, onToggleVisibility }) =>
     };
 
     return (
-        <div className={isVisible ? `Modal-Component Visible ${className}` : `Modal-Component ${className}`}>
+        <div className={`Modal-Component ${className} ${isVisible ? "Visible" : ""}`}>
             <div className="Modal-Overlay" onClick={toggleVisibility}/>
             <div className="Modal-Content">
                 {children}

@@ -5,15 +5,15 @@ export const Banner = () => {
     const [activeOption, setActiveIndex] = useState(0);
     const { techstackRef, experienceRef, projectsRef } = useContext(TechContext)
 
-    const sndMenuRef = useRef(new Audio("/Sounds/Klick.wav")).current;
-    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav")).current;
-    const sndStartRef = useRef(new Audio("/Sounds/Start.wav")).current;
+    const sndMenuRef = useRef(new Audio("/Sounds/Klick.wav"));
+    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav"));
+    const sndStartRef = useRef(new Audio("/Sounds/Start.wav"));
 
     const menuOptions = {
         startGame: {
             Name: "Iniciar juego",
             Function: () => { 
-                sndStartRef.play();
+                sndStartRef.current.play();
                 alert("Portafolio en desarrollo. Algunas funciones aun no estan disponibles."); 
             }
         },
@@ -21,7 +21,7 @@ export const Banner = () => {
         Technologies: {
             Name: "Tecnologías",
             Function: () => {
-                sndEnterRef.play();
+                sndEnterRef.current.play();
                 techstackRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
             }
         },
@@ -29,7 +29,7 @@ export const Banner = () => {
         Experience: {
             Name: "Experiencia",
             Function: () => {
-                sndEnterRef.play();
+                sndEnterRef.current.play();
                 experienceRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
             }
         },
@@ -37,7 +37,7 @@ export const Banner = () => {
         Projects: {
             Name: "Proyectos",
             Function: () => {
-                sndEnterRef.play();
+                sndEnterRef.current.play();
                 projectsRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
             }
         },
@@ -75,7 +75,7 @@ export const Banner = () => {
                     <ul className="Navigation-Menu">
                         {Object.values(menuOptions).map((item, index) => (
                             <li key={index}
-                                className={activeOption === index ? 'Selected' : ''}
+                                className={activeOption === index ? "Selected" : ""}
                                 onClick={item.Function}
                                 onMouseEnter={() => {
                                     setActiveIndex(index);

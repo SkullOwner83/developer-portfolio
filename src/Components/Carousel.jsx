@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 export const Carousel = ({ Size = 96, Gap = 16}) => {
     const [animationRunning, setAnimationRunning] = useState(true);
     const { setCurrentTech, Technologies } = useContext(TechContext);
-    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav")).current;
+    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav"));
 
     const Styles = {
         width: `${Size + Gap}px`,
@@ -20,35 +20,41 @@ export const Carousel = ({ Size = 96, Gap = 16}) => {
             onMouseEnter={() => setAnimationRunning(false)}
             onMouseLeave={() => setAnimationRunning(true)}>
 
-            <div className={animationRunning ? "Items-Container" : "Items-Container Animation-Stopped"}>
+            <div className={`Items-Container ${!animationRunning ? "Animation-Stopped" : ""}`}>
                 {Object.values(Technologies).map((item, index) => (
                     item.Section === "Main" && (
                         <div key={index} className="Carousel-Item" style={Styles}>
                             <img
                                 src={TechImages[item.Name]}
-                                onClick={() => { sndEnterRef.play(); setCurrentTech(item) }}
                                 className="Icon-Item"
                                 alt={item.Name}
+                                onClick={() => { 
+                                    sndEnterRef.curreent.play();
+                                    setCurrentTech(item)
+                                }}
                             />
                         </div>
                     )
                 ))}
             </div>
 
-            <div className={animationRunning ? "Items-Container" : "Items-Container Animation-Stopped"}>
+            <div className={`Items-Container ${!animationRunning ? "Animation-Stopped" : ""}`}>
                 {Object.values(Technologies).map((item, index) => (
                     item.Section === "Main" && (
                         <div key={index} className="Carousel-Item" style={Styles}>
                             <img
                                 src={TechImages[item.Name]}
-                                onClick={() => { sndEnterRef.play(); setCurrentTech(item) }}
                                 className="Icon-Item"
                                 alt={item.Name}
+                                onClick={() => {
+                                    sndEnterRef.play(); 
+                                    setCurrentTech(item)
+                                }}
                             />
                         </div>
                     )
                 ))}
-            </div>
+            </div>  
         </div>
     )
 }
