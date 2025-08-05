@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useRef } from "react";
 import { TechContext } from "../Contexts/TechContext";
 import TechImages from "../Data/Images";
 import PropTypes from "prop-types";
@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 export const Carousel = ({ Size = 96, Gap = 16}) => {
     const [animationRunning, setAnimationRunning] = useState(true);
     const { setCurrentTech, Technologies } = useContext(TechContext);
+    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav")).current;
 
     const Styles = {
         width: `${Size + Gap}px`,
@@ -25,7 +26,7 @@ export const Carousel = ({ Size = 96, Gap = 16}) => {
                         <div key={index} className="Carousel-Item" style={Styles}>
                             <img
                                 src={TechImages[item.Name]}
-                                onClick={() => setCurrentTech(item)}
+                                onClick={() => { sndEnterRef.play(); setCurrentTech(item) }}
                                 className="Icon-Item"
                                 alt={item.Name}
                             />
@@ -40,7 +41,7 @@ export const Carousel = ({ Size = 96, Gap = 16}) => {
                         <div key={index} className="Carousel-Item" style={Styles}>
                             <img
                                 src={TechImages[item.Name]}
-                                onClick={() => setCurrentTech(item)}
+                                onClick={() => { sndEnterRef.play(); setCurrentTech(item) }}
                                 className="Icon-Item"
                                 alt={item.Name}
                             />

@@ -11,6 +11,7 @@ export const TechDetails = ({ Technology, on_previous, on_next }) => {
 
     const mainContainerRef = useRef(null);
     const buttonsOverlayRef = useRef(null);
+    const SndSelectRef = useRef(new Audio("/Sounds/Select.wav")).current;
 
     // Maintain the navigation buttons at the same heigh as the icon container to preserve the design when the control wraps
     useEffect(() => {
@@ -36,8 +37,8 @@ export const TechDetails = ({ Technology, on_previous, on_next }) => {
     return (
         <div className="TechDetails-Component" ref={mainContainerRef}>
             <div className="Buttons-Overlay" ref={buttonsOverlayRef}>
-                <button onClick={on_previous}><img src="/Icons/Arrow.svg" draggable="false"/></button>
-                <button onClick={on_next} style={{transform: "rotate(180deg)"}}><img src="/Icons/Arrow.svg" draggable="false"/></button>
+                <button onClick={()=> { SndSelectRef.play(); on_previous(); }}><img src="/Icons/Arrow.svg" draggable="false"/></button>
+                <button onClick={() => { SndSelectRef.play(); on_next(); }} style={{transform: "rotate(180deg)"}}><img src="/Icons/Arrow.svg" draggable="false"/></button>
             </div>
 
             <div className="Icon-Container">

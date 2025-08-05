@@ -5,28 +5,41 @@ export const Banner = () => {
     const [activeOption, setActiveIndex] = useState(0);
     const { techstackRef, experienceRef, projectsRef } = useContext(TechContext)
 
-    const sndMenuRef = useRef(new Audio("../../Sounds/Menu.wav")).current;
-    sndMenuRef.volume = 1;
+    const sndMenuRef = useRef(new Audio("/Sounds/Klick.wav")).current;
+    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav")).current;
+    const sndStartRef = useRef(new Audio("/Sounds/Start.wav")).current;
 
     const menuOptions = {
         startGame: {
             Name: "Iniciar juego",
-            Function: () => { alert("Portafolio en desarrollo. Algunas funciones aun no estan disponibles."); }
+            Function: () => { 
+                sndStartRef.play();
+                alert("Portafolio en desarrollo. Algunas funciones aun no estan disponibles."); 
+            }
         },
 
         Technologies: {
             Name: "Tecnologías",
-            Function: () => techstackRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
+            Function: () => {
+                sndEnterRef.play();
+                techstackRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
+            }
         },
 
         Experience: {
             Name: "Experiencia",
-            Function: () => experienceRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
+            Function: () => {
+                sndEnterRef.play();
+                experienceRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
+            }
         },
 
         Projects: {
             Name: "Proyectos",
-            Function: () => projectsRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
+            Function: () => {
+                sndEnterRef.play();
+                projectsRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
+            }
         },
 
         Options: {

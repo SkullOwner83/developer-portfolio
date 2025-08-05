@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import { Carousel } from "../Components/Carousel"
 import { TechDetails } from "../Components/TechDetails";
 import { TechContext } from "../Contexts/TechContext";
@@ -10,6 +10,7 @@ export const Home = () => {
     const { currentTech, setCurrentTech, techstackRef, experienceRef, projectsRef, Technologies, Experience, Projects } = useContext(TechContext);
     const [isMobile, setIsMobile] = useState(false);
     const technologiesArray = Object.values(Technologies);
+    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav")).current;
 
     useEffect(() => {
         const handleResize = () => {
@@ -65,7 +66,7 @@ export const Home = () => {
                                             <img 
                                                 key={index} 
                                                 src={TechImages[item.Name]}
-                                                onClick={() => setCurrentTech(item)}
+                                                onClick={() => { sndEnterRef.play(); setCurrentTech(item) }}
                                                 className="Icon-Item"
                                             />
                                         )
@@ -82,7 +83,7 @@ export const Home = () => {
                                             <img 
                                                 key={index} 
                                                 src={TechImages[item.Name]}
-                                                onClick={() => setCurrentTech(item)}
+                                                onClick={() => { sndEnterRef.play(); setCurrentTech(item) }}
                                                 className="Icon-Item"
                                             />
                                         )
