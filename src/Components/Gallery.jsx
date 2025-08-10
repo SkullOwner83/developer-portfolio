@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 import { Modal } from "./Modal";
-import { useState, useRef } from "react";
+import { useState, useContext } from "react";
 import { StateColor } from "../Utilities/Enums";
+import { AudioContext } from "../Contexts/AudioContext";
 import TechImages from "../Data/Images";
 
 export const Gallery = ({ Items }) => {
     const [currentModalImage, setCurrentModalImage] = useState(null);
     const [toggleModal, setToggleModal] = useState(false);
-    const sndOpenRef = useRef(new Audio("/Sounds/Open.wav"));
+    const { playsound } = useContext(AudioContext);
 
     return (
         <div className="Gallery-Component">
@@ -23,7 +24,7 @@ export const Gallery = ({ Items }) => {
                             className="Image-Background" 
                             style={{backgroundImage: `url(${encodeURI(project.Image)})`}}
                             onClick={() => { 
-                                sndOpenRef.current.play();
+                                playsound("Open")
                                 setCurrentModalImage(project.Image); 
                                 setToggleModal(true); 
                             }}

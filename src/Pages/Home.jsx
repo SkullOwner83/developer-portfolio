@@ -1,16 +1,17 @@
-import { useContext, useEffect, useState, useRef } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Carousel } from "../Components/Carousel"
 import { TechDetails } from "../Components/TechDetails";
 import { TechContext } from "../Contexts/TechContext";
+import { AudioContext } from "../Contexts/AudioContext";
 import { Timeline } from "../Components/Timeline";
 import { Gallery } from "../Components/Gallery";
 import TechImages from "../Data/Images";
 
 export const Home = () => {
     const { currentTech, setCurrentTech, techstackRef, experienceRef, projectsRef, Technologies, Experience, Projects } = useContext(TechContext);
+    const { playsound } = useContext(AudioContext);
     const [isMobile, setIsMobile] = useState(false);
     const technologiesArray = Object.values(Technologies);
-    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav"));
 
     useEffect(() => {
         function handleResize() {
@@ -68,7 +69,7 @@ export const Home = () => {
                                                 src={TechImages[item.Name]}
                                                 className="Icon-Item"
                                                 onClick={() => {
-                                                    sndEnterRef.current.play(); 
+                                                    playsound("Enter");
                                                     setCurrentTech(item)
                                                 }}
                                             />
@@ -88,7 +89,7 @@ export const Home = () => {
                                                 src={TechImages[item.Name]}
                                                 className="Icon-Item"
                                                 onClick={() => { 
-                                                    sndEnterRef.current.play(); 
+                                                    playsound("Enter"); 
                                                     setCurrentTech(item)
                                                 }}
                                             />

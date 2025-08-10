@@ -1,17 +1,18 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
+import { AudioContext } from "../Contexts/AudioContext";
 import { TechContext } from "../Contexts/TechContext";
 import TechImages from "../Data/Images";
 import { useEffect, useRef } from "react";
 
 export const TechDetails = ({ Technology, on_previous, on_next }) => {
     const { Technologies } = useContext(TechContext);
+    const { playsound } = useContext(AudioContext);
     const defaultTech = Object.values(Technologies)[0];
     const technology = Technology || defaultTech;
 
     const mainContainerRef = useRef(null);
     const buttonsOverlayRef = useRef(null);
-    const SndSelectRef = useRef(new Audio("/Sounds/Select.wav"));
 
     // Maintain the navigation buttons at the same heigh as the icon container to preserve the design when the control wraps
     useEffect(() => {
@@ -37,8 +38,8 @@ export const TechDetails = ({ Technology, on_previous, on_next }) => {
     return (
         <div className="TechDetails-Component" ref={mainContainerRef}>
             <div className="Buttons-Overlay" ref={buttonsOverlayRef}>
-                <button onClick={()=> { SndSelectRef.current.play(); on_previous(); }}><img src="/Icons/Arrow.svg" draggable="false"/></button>
-                <button onClick={() => { SndSelectRef.current.play(); on_next(); }} style={{transform: "rotate(180deg)"}}><img src="/Icons/Arrow.svg" draggable="false"/></button>
+                <button onClick={() => { playsound("Select"); on_previous(); }}><img src="/Icons/Arrow.svg" draggable="false"/></button>
+                <button onClick={() => { playsound("Select"); on_next(); }} style={{transform: "rotate(180deg)"}}><img src="/Icons/Arrow.svg" draggable="false"/></button>
             </div>
 
             <div className="Icon-Container">

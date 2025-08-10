@@ -1,19 +1,17 @@
-import { useState, useContext, useRef } from "react";
+import { useState, useContext } from "react";
+import { AudioContext } from "../Contexts/AudioContext";
 import { TechContext } from "../Contexts/TechContext";
 
 export const Banner = () => {
     const [activeOption, setActiveIndex] = useState(0);
     const { techstackRef, experienceRef, projectsRef } = useContext(TechContext)
-
-    const sndMenuRef = useRef(new Audio("/Sounds/Menu.wav"));
-    const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav"));
-    const sndStartRef = useRef(new Audio("/Sounds/Start.wav"));
+    const { playsound } = useContext(AudioContext);
 
     const menuOptions = {
         startGame: {
             Name: "Iniciar juego",
             Function: () => { 
-                sndStartRef.current.play();
+                playsound("Start");
                 alert("Portafolio en desarrollo. Algunas funciones aun no estan disponibles."); 
             }
         },
@@ -21,7 +19,7 @@ export const Banner = () => {
         Technologies: {
             Name: "Tecnologías",
             Function: () => {
-                sndEnterRef.current.play();
+                playsound("Enter");
                 techstackRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
             }
         },
@@ -29,7 +27,7 @@ export const Banner = () => {
         Experience: {
             Name: "Experiencia",
             Function: () => {
-                sndEnterRef.current.play();
+                playsound("Enter");
                 experienceRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
             }
         },
@@ -37,7 +35,7 @@ export const Banner = () => {
         Projects: {
             Name: "Proyectos",
             Function: () => {
-                sndEnterRef.current.play();
+                playsound("Enter");
                 projectsRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
             }
         },
@@ -81,7 +79,7 @@ export const Banner = () => {
                                     setActiveIndex(index);
                     
                                     if (activeOption != index) {
-                                        sndMenuRef.current.play();
+                                        playsound("Menu");
                                     }
                                 }}
                             >

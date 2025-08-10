@@ -1,18 +1,36 @@
-import { createContext } from "react";
+import { createContext, useState, useRef } from "react";
 import PropTypes from "prop-types";
 
-export const VolumeContext = createContext()
+export const AudioContext = createContext()
 
-export const VolumeProvider = ({ children }) => {
-    const [webVolume, setWebVolume] = useState(1)
+export const AudioProvider = ({ children }) => {
+    const [webVolume, setWebVolume] = useState(1);
+    
+    const sounds = useRef({
+        Menu: new Audio("/Sounds/Menu.wav"),
+        Open: new Audio("/Sounds/Open.wav"),
+        Enter: new Audio("/Sounds/Enter.wav"),
+        Start: new Audio("/Sounds/Start.wav"),
+        Select: new Audio("/Sounds/Select.wav")
+    });
+
+    function playsound(sound) {
+        sound = sounds.current[sound];
+        
+        if (sound) {
+            sound.volume = webVolume;
+            sound.currentTime = 0;
+            sound.play();
+        }
+    }
 
     return (
-        <VolumeContext.Provider value={{webVolume, setWebVolume}}>
+        <AudioContext.Provider value={{webVolume, setWebVolume, playsound}}>
             {children}
-        </VolumeContext.Provider>
+        </AudioContext.Provider>
     )
 }
 
-VolumeProvider.propTypes = {
+AudioProvider.propTypes = {
     children: PropTypes.node.isRequired
 };
