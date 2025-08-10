@@ -88,7 +88,7 @@ export const Home = () => {
                                                 src={TechImages[item.Name]}
                                                 className="Icon-Item"
                                                 onClick={() => { 
-                                                    sndEnterRef.play(); 
+                                                    sndEnterRef.current.play(); 
                                                     setCurrentTech(item)
                                                 }}
                                             />

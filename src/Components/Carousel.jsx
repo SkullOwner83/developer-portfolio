@@ -29,8 +29,8 @@ export const Carousel = ({ Size = 96, Gap = 16}) => {
                                 className="Icon-Item"
                                 alt={item.Name}
                                 onClick={() => { 
-                                    sndEnterRef.curreent.play();
-                                    setCurrentTech(item)
+                                    sndEnterRef.current.play(); 
+                                    setCurrentTech(item) 
                                 }}
                             />
                         </div>
@@ -46,15 +46,15 @@ export const Carousel = ({ Size = 96, Gap = 16}) => {
                                 src={TechImages[item.Name]}
                                 className="Icon-Item"
                                 alt={item.Name}
-                                onClick={() => {
-                                    sndEnterRef.play(); 
-                                    setCurrentTech(item)
+                                onClick={() => { 
+                                    sndEnterRef.current.play(); 
+                                    setCurrentTech(item) 
                                 }}
                             />
                         </div>
                     )
                 ))}
-            </div>  
+            </div>
         </div>
     )
 }

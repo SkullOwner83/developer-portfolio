@@ -37,8 +37,8 @@ export const TechDetails = ({ Technology, on_previous, on_next }) => {
     return (
         <div className="TechDetails-Component" ref={mainContainerRef}>
             <div className="Buttons-Overlay" ref={buttonsOverlayRef}>
-                <button onClick={()=> { SndSelectRef.play(); on_previous(); }}><img src="/Icons/Arrow.svg" draggable="false"/></button>
-                <button onClick={() => { SndSelectRef.play(); on_next(); }} style={{transform: "rotate(180deg)"}}><img src="/Icons/Arrow.svg" draggable="false"/></button>
+                <button onClick={()=> { SndSelectRef.current.play(); on_previous(); }}><img src="/Icons/Arrow.svg" draggable="false"/></button>
+                <button onClick={() => { SndSelectRef.current.play(); on_next(); }} style={{transform: "rotate(180deg)"}}><img src="/Icons/Arrow.svg" draggable="false"/></button>
             </div>
 
             <div className="Icon-Container">

@@ -5,7 +5,7 @@ export const Banner = () => {
     const [activeOption, setActiveIndex] = useState(0);
     const { techstackRef, experienceRef, projectsRef } = useContext(TechContext)
 
-    const sndMenuRef = useRef(new Audio("/Sounds/Klick.wav"));
+    const sndMenuRef = useRef(new Audio("/Sounds/Menu.wav"));
     const sndEnterRef = useRef(new Audio("/Sounds/Enter.wav"));
     const sndStartRef = useRef(new Audio("/Sounds/Start.wav"));
 
@@ -81,7 +81,7 @@ export const Banner = () => {
                                     setActiveIndex(index);
                     
                                     if (activeOption != index) {
-                                        sndMenuRef.play();
+                                        sndMenuRef.current.play();
                                     }
                                 }}
                             >
