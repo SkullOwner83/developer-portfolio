@@ -8,7 +8,16 @@ const Projects = {
         Website: "https://solotu-remixcontest.web.app/",
         CodeLink: "https://github.com/SkullOwner83/remix-contest",
         State: State.FINISHED,
-        Image: "/Gallery/Solo Tu.png"
+        Image: "/Gallery/Solo Tu.webp"
+    },
+
+    AIAssistant: {
+        Name: "AI-Assistant",
+        Description: "Asistente virtual con inteligencia artificial, capaz de generar y recuperar embeddings de archivos para realizar búsquedas semánticas.",
+        Technologies: ["React", "Python", "MySQL"],
+        CodeLink: "https://github.com/SkullOwner83/ai-assistant",
+        State: State.FINISHED,
+        Image: "/Gallery/AI-Assistant.webp"
     },
 
     BotBonito: {
@@ -17,7 +26,7 @@ const Projects = {
         Technologies: ["Python", "Flet"],
         CodeLink: "https://github.com/SkullOwner83/botbonito",
         State: State.FINISHED,
-        Image: "/Gallery/Botbonito.png"
+        Image: "/Gallery/Botbonito.webp"
     },
 
     Scriptcraft: {
@@ -26,7 +35,7 @@ const Projects = {
         Technologies: ["C#", "XAML"],
         State: State.DEVELOPING,
         DownloadLink: "",
-        Image: "/Gallery/Scriptcraft.png"
+        Image: "/Gallery/Scriptcraft.webp"
     },
 
     PointSale: {
@@ -34,7 +43,7 @@ const Projects = {
         Description: "Sistema para la administración de recursos y operaciones comerciales enfocado al sector tecnológico.",
         Technologies: ["C#", "XAML", "MySQL"],
         State: State.PAUSED,
-        Image: "/Gallery/Punto de venta.png"
+        Image: "/Gallery/Punto de venta.webp"
     },
 
     SIAWebsite: {
@@ -43,7 +52,7 @@ const Projects = {
         Technologies: ["React", "SASS"],
         CodeLink: "https://github.com/SkullOwner83/SiaWebsite",
         State: State.PAUSED,
-        Image: "/Gallery/Sia website.png"
+        Image: "/Gallery/Sia website.webp"
     },
 
     Cinemovies: {
@@ -52,7 +61,7 @@ const Projects = {
         Technologies: ["HTML", "CSS", "Javascript"],
         State: State.PAUSED,
         CodeLink: "https://github.com/SkullOwner83/Cinemovies",
-        Image: "/Gallery/Cinemovies.png"
+        Image: "/Gallery/Cinemovies.webp"
     },
 
     UFOInvader: {
@@ -61,7 +70,7 @@ const Projects = {
         Technologies: ["Game Maker Studio 2"],
         Website: "https://gamejolt.com/games/uffo_invader/639334",
         State: State.FINISHED,
-        Image: "/Gallery/Ufo Invader.jpg"
+        Image: "/Gallery/Ufo Invader.webp"
     },
 
     PacMan: {
